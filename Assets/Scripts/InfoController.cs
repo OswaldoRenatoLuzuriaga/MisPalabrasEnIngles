@@ -7,6 +7,8 @@ public class InfoController : MonoBehaviour
 	public Text infoText;
 	public Image infoImage;
 	public Button backButton;
+
+	
 	
 
 	private Dictionary<string, string> infoAnimales;
@@ -48,15 +50,19 @@ public class InfoController : MonoBehaviour
 
 		yield return new WaitForSeconds(0.2f);
 
-		if (infoAnimales.TryGetValue(nombreAnimal, out string info))
-		{
-			infoText.text = info;
+		if (nombreAnimal != null) {
+			if (infoAnimales.TryGetValue(nombreAnimal, out string info))
+			{
+				infoText.text = info;
 
-		}
-		else {
+			}
+			else
+			{
 
-			infoText.text = "Ninguna información que mostrar";
+				infoText.text = "Ninguna información que mostrar";
+			}
 		}
+		
 
 
 

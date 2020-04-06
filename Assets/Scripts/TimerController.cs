@@ -7,7 +7,7 @@ public class TimerController : MonoBehaviour
 {
     #region PUBLIC_VARIABLES
     public Text contador;
-    private Text gameOver;
+  
     public static float tiempoActual;
     public Image healthBar;
     public Button ayuda1;
@@ -36,7 +36,7 @@ public class TimerController : MonoBehaviour
         tiempoActual = 0;
         ActualizarTiempo();
         //ayuda1.gameObject.SetActive(true);
-
+		
     }
 	
 
@@ -53,7 +53,9 @@ public class TimerController : MonoBehaviour
 
         if (timeMax < 0) {
             contador.text = ""+ 0;
-           // gameOver.enabled = true;
+			/*GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
+			//anim = canvas.GetComponent<Animator>();
+			anim.SetTrigger("GameOver");*/
         }
 
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GestorJuego
   - Panel
+  - Canvas
   layers:
   - Default
   - TransparentFX
