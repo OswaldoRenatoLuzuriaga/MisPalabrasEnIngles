@@ -23,9 +23,16 @@ public class OptionController: MonoBehaviour
 	private List<string> animales;
     private int  puntos;
 	private string nombreCorrecto = "";
-	
+
 
 	#region UNITY_MONOBEHAVIOUR_METHODS
+
+
+	private void Awake()
+	{
+		DontDestroyOnLoad(gameObject);
+	}
+
 
 	void Start()
     {
@@ -33,10 +40,6 @@ public class OptionController: MonoBehaviour
 		animales = new List<string>();
 		//ActualizaPuntos();
 		//InicializarNombres();
-
-
-
-
 	}
 
 	#endregion

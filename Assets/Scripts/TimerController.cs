@@ -56,7 +56,8 @@ public class TimerController : MonoBehaviour
 			/*GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
 			//anim = canvas.GetComponent<Animator>();
 			anim.SetTrigger("GameOver");*/
-        }
+			Application.LoadLevel("GameOver");
+		}
 
 
        /* if (timeMax <= 10)
