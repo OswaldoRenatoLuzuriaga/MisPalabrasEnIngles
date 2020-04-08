@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
@@ -56,7 +57,8 @@ public class TimerController : MonoBehaviour
 			/*GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
 			//anim = canvas.GetComponent<Animator>();
 			anim.SetTrigger("GameOver");*/
-			Application.LoadLevel("GameOver");
+			
+			SceneManager.LoadScene("GameOver");
 		}
 
 

@@ -1,17 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortadaController : MonoBehaviour
 {
 
-	private Rigidbody rbd;
-	private float downForce = 20000f;
 
-	private void Awake()
-	{
-		rbd = GetComponent<Rigidbody>();
-	}
+
 
 	private void Update()
 	{
@@ -19,6 +15,6 @@ public class PortadaController : MonoBehaviour
 	}
 	public void LanzarJuego() {
 
-		Application.LoadLevel("GamePlay");
+		SceneManager.LoadScene("GamePlay");
 	}
 }
