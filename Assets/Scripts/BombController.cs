@@ -10,7 +10,7 @@ public class BombController: MonoBehaviour
 	
 
     //Variable de Fuerza de caida
-    private float downForce = 20000f;
+    private float downForce = 30000f;
     private bool useHelp;
 
 

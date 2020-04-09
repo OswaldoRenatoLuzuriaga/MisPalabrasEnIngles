@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayController : MonoBehaviour
 {
+
+	public string escena;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +22,7 @@ public class PlayController : MonoBehaviour
 
       void OnMouseDown()
 	{
-	
-	
-
-
-		SceneManager.LoadScene("GamePlay");
+		SceneManager.LoadScene(escena);
 	}
 
 

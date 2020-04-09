@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Threading;
 using System.IO;
-
+using TMPro;
 public class OptionController: MonoBehaviour
 {
 	
-	public Text textoPuntos;
-	
+	public TextMeshProUGUI score;
 
-    public  Button button1;
+	public  Button button1;
 	public  Button button2;
 	public Button button3;
 
@@ -30,28 +29,24 @@ public class OptionController: MonoBehaviour
 
 	private void Awake()
 	{
-		DontDestroyOnLoad(gameObject);
+		
 	}
 
 
 	void Start()
     {
-		
+		puntos = 0;
 		animales = new List<string>();
-		//ActualizaPuntos();
-		//InicializarNombres();
+	
 	}
 
 	#endregion
 
-	#region PRIVATE_METHODS
-	public void SumarPuntos() {
-		puntos++;
-		ActualizaPuntos();
-    }
 
 	private void ActualizaPuntos() {
-	 textoPuntos.text = textoPuntos +" "+ puntos;
+		Debug.Log("Estoy actualizando puntos: " + puntos);
+		puntos++;
+		score.text = "Score: "+ puntos;
     }
 
 
@@ -130,36 +125,70 @@ public class OptionController: MonoBehaviour
 
 
 	}
-	#endregion
+	
 
 
 
+	private bool IsCorrecto(string nombreButton) {
+
+		return (nombreButton.Equals(nombreCorrecto)) ? true : false;
+	}
+
+	public void PulsarButton1 (){
+
+		if (IsCorrecto(nombre1.text)) {
+			ActualizaPuntos();
+			button2.gameObject.SetActive(false);
+			button3.gameObject.SetActive(false);
+		}
+	}
+
+	public void PulsarButton2()
+	{
+
+		if (IsCorrecto(nombre2.text))
+		{
+			ActualizaPuntos();
+			button1.gameObject.SetActive(false);
+			button3.gameObject.SetActive(false);
+		}
+	}
+
+
+	public void PulsarButton3()
+	{
+
+		if (IsCorrecto(nombre3.text))
+		{
+			ActualizaPuntos();
+			button2.gameObject.SetActive(false);
+			button1.gameObject.SetActive(false);
+		}
+	}
 
 
 
-
-
-
+	//Inicializamos los butones que esten desactivados
 	#region PUBLIC_ METHOD
-	public void ActivarBotones(string nombreAnimal) {
+	public void InitBotones(string nombreAnimal) {
 		InicializarNombres();
 		StartCoroutine(AddNombre(nombreAnimal));
-
+	
 		if (!button1.gameObject.activeInHierarchy)
 		{
 			button1.gameObject.SetActive(true);
 		}
-		else if (!button2.gameObject.activeInHierarchy)
+		if (!button2.gameObject.activeInHierarchy)
 		{
 			button2.gameObject.SetActive(true);
 		}
-		else if (!button3.gameObject.activeInHierarchy)
+	    if (!button3.gameObject.activeInHierarchy)
 		{
 			button3.gameObject.SetActive(true);
 		}
 
-
-		}
+		
+	}
 
 
 

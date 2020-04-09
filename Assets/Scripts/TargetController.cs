@@ -101,7 +101,7 @@ public class TargetController : MonoBehaviour, ITrackableEventHandler
             // Enable canvas':
             foreach (var component in canvasComponents)
                 component.enabled = true;
-            StartCoroutine(InfoTarget(true, mTrackableBehaviour.TrackableName));
+			StartCoroutine(InfoTarget(true, mTrackableBehaviour.TrackableName));
         }
 
     }
@@ -140,7 +140,7 @@ public class TargetController : MonoBehaviour, ITrackableEventHandler
     {
         yield return new WaitForSeconds(0.2f);
         GameObject gestor = GameObject.FindGameObjectWithTag("GestorJuego");
-        gestor.GetComponent<OptionController>().ActivarBotones(nombre);
+        gestor.GetComponent<OptionController>().InitBotones(nombre);
 		GameObject infoPanel = GameObject.FindGameObjectWithTag("Panel");
 		infoPanel.GetComponent<InfoController>().SetNombreAnimal(nombre);
 
