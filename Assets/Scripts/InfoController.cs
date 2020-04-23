@@ -2,30 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Vuforia;
+
 public class InfoController : MonoBehaviour
 {
 	public Text infoText;
-	public Image infoImage;
+	public UnityEngine.UI.Image infoImage;
 	public Button backButton;
 
 	
-	
+
+
+
+
+
+
 
 	private Dictionary<string, string> infoAnimales;
 	private string nombreAnimal;
+
+
 	// Start is called before the first frame update
 	void Start()
 	{
 
 		infoAnimales = new Dictionary<string, string>();
 		InitAnimales();
+		
+
 	}
 
 
-	private void Update()
-	{
-		StartCoroutine(InitPanel(nombreAnimal));
-	}
 
 	public void SetNombreAnimal(string nombreAnimal)
 	{
@@ -48,17 +55,16 @@ public class InfoController : MonoBehaviour
 	private IEnumerator InitPanel(string nombreAnimal)
 	{
 
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForSeconds(0.5f);
 
 		if (nombreAnimal != null) {
 			if (infoAnimales.TryGetValue(nombreAnimal, out string info))
 			{
 				infoText.text = info;
-
+				
 			}
 			else
 			{
-
 				infoText.text = "Ninguna información que mostrar";
 			}
 		}
@@ -78,7 +84,8 @@ public class InfoController : MonoBehaviour
 	public void OnEnabledPanel()
 	{
 		StartCoroutine(InitPanel(nombreAnimal));
-
+		
+		SoundSystem.soundEffect.Personaje(nombreAnimal);
 		infoText.gameObject.SetActive(true);
 		infoImage.gameObject.SetActive(true);
 		backButton.gameObject.SetActive(true);

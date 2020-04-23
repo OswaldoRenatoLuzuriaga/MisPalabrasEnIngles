@@ -18,10 +18,11 @@ public class BombController: MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb2d;
     private Image bombImage;
-    #endregion
+	#endregion
 
-    #region PUBLIC_VARIABLES
-    //Boton de ayuda
+	#region PUBLIC_VARIABLES
+	//Boton de ayuda
+	public Button HelpButton;
     public Image addHelp;
     public Image closeHelp;
 	public Button button1;
@@ -41,7 +42,7 @@ public class BombController: MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         bombImage = GetComponent<Image>();
-        useHelp = false;
+        
     }
 
     // Update is called once per frame
@@ -51,13 +52,13 @@ public class BombController: MonoBehaviour
         //Lanzamos la granada, anulando los constrains y estableciendo la velocidad de caida
         if (useHelp)
         {
-           
-            rb2d.constraints = RigidbodyConstraints2D.None;
+			StartCoroutine(ActivarBomba());
+			rb2d.constraints = RigidbodyConstraints2D.None;
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(Vector2.down * downForce);
             useHelp = false;
-
-        }
+			
+		}
     }
 	#endregion
 
@@ -66,7 +67,7 @@ public class BombController: MonoBehaviour
     {
         StartCoroutine(DesactivarBomba());
         anim.SetTrigger("Explosion");
-        SoundSystem.sonido.PlayAudioExplosion();
+        SoundSystem.soundEffect.Explosion();
       /*  anim.SetBool("Exit", true);
         SoundSystem.sonido.PlayAudioExplosion();*/
         
@@ -82,7 +83,7 @@ public class BombController: MonoBehaviour
         Color c = bombImage.color;
         c.a -= 1;
         bombImage.color = c;
-
+		HelpButton.enabled = false;
 
 
     }
@@ -102,7 +103,7 @@ public class BombController: MonoBehaviour
 
           yield return new WaitForSeconds(0.4f);
 
-          GameObject gestor = GameObject.FindGameObjectWithTag("GestorJuego");
+          GameObject gestor = GameObject.FindGameObjectWithTag("GestorPreguntas");
           string nombreCorrecto= gestor.GetComponent<OptionController>().GetNombreAnimal();
 
 
@@ -111,18 +112,18 @@ public class BombController: MonoBehaviour
 			
               if (nombreCorrecto == optionText1.text)
               {
-                  button1.gameObject.SetActive(false);
+                  button2.gameObject.SetActive(false);
               }
               else if (nombreCorrecto.Equals(optionText2.text))
               {
 
-                  button2.gameObject.SetActive(false);
+                  button3.gameObject.SetActive(false);
 
               }
               else if (nombreCorrecto.Equals(optionText3.text))
               {
 
-                  button3.gameObject.SetActive(false);
+                  button1.gameObject.SetActive(false);
 
               }
 
@@ -141,13 +142,17 @@ public class BombController: MonoBehaviour
 
     public void LanzarBomba()
     {
-        StartCoroutine(ActivarBomba());
-        useHelp = true;
-        addHelp.enabled = false;
-        closeHelp.enabled = true;
-     
-        
-    }
+		//Si la bomba no es usada llamada a la courutina
+		if (HelpButton.enabled) {
+			useHelp = true;
+			addHelp.enabled = false;
+			closeHelp.enabled = true;
+		}
+	
+		
+		//	HelpButton.enabled = false;
+
+	}
 	#endregion
 
 }

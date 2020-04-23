@@ -1,149 +1,216 @@
-﻿
+﻿/*==============================================================================
+Copyright (c) 2019 PTC Inc. All Rights Reserved.
+
+Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Protected under copyright and other laws.
+==============================================================================*/
+
 using UnityEngine;
+using UnityEngine.Events;
 using Vuforia;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
-
-
-public class TargetController : MonoBehaviour, ITrackableEventHandler
+using System.Collections;
+/// <summary>
+/// A custom handler that implements the ITrackableEventHandler interface.
+///
+/// Changes made to this file could be overwritten when upgrading the Vuforia version.
+/// When implementing custom event handler behavior, consider inheriting from this class instead.
+/// </summary>
+public class TargetController : MonoBehaviour
 {
-    #region PROTECTED_MEMBER_VARIABLES
 
-    protected TrackableBehaviour mTrackableBehaviour;
-    protected TrackableBehaviour.Status m_PreviousStatus;
-    protected TrackableBehaviour.Status m_NewStatus;
+	public Transform panelInformativo;
 
-    #endregion // PROTECTED_MEMBER_VARIABLES
+	public enum TrackingStatusFilter
+	{
+		Tracked,
+		Tracked_ExtendedTracked,
+		Tracked_ExtendedTracked_Limited
+	}
 
-
-
-    #region UNITY_MONOBEHAVIOUR_METHODS
-
-    protected virtual void Start()
-    {
-       
-
-        mTrackableBehaviour = GetComponent<TrackableBehaviour>();
-        if (mTrackableBehaviour)
-            mTrackableBehaviour.RegisterTrackableEventHandler(this);
-    }
-
-    protected virtual void OnDestroy()
-    {
-        if (mTrackableBehaviour)
-            mTrackableBehaviour.UnregisterTrackableEventHandler(this);
-    }
-
-    #endregion // UNITY_MONOBEHAVIOUR_METHODS
-
-    #region PUBLIC_METHODS
-
-    /// <summary>
-    ///     Implementation of the ITrackableEventHandler function called when the
-    ///     tracking state changes.
-    /// </summary>
-    public void OnTrackableStateChanged(
-        TrackableBehaviour.Status previousStatus,
-        TrackableBehaviour.Status newStatus)
-    {
-        m_PreviousStatus = previousStatus;
-        m_NewStatus = newStatus;
-
-        Debug.Log("Trackable " + mTrackableBehaviour.TrackableName +
-                  " " + mTrackableBehaviour.CurrentStatus +
-                  " -- " + mTrackableBehaviour.CurrentStatusInfo);
-
-        if (newStatus == TrackableBehaviour.Status.DETECTED ||
-            newStatus == TrackableBehaviour.Status.TRACKED ||
-            newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
-        {
-            OnTrackingFound();
+	
+	public TrackingStatusFilter StatusFilter = TrackingStatusFilter.Tracked_ExtendedTracked_Limited;
+	public UnityEvent OnTargetFound;
+	public UnityEvent OnTargetLost;
 
 
-        }
-        else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
-                 newStatus == TrackableBehaviour.Status.NO_POSE)
-        {
-            OnTrackingLost();
+	protected TrackableBehaviour mTrackableBehaviour;
+	protected TrackableBehaviour.Status m_PreviousStatus;
+	protected TrackableBehaviour.Status m_NewStatus;
+	protected bool m_CallbackReceivedOnce = false;
+
+	protected virtual void Start()
+	{
+		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+
+		if (mTrackableBehaviour)
+		{
+			mTrackableBehaviour.RegisterOnTrackableStatusChanged(OnTrackableStatusChanged);
+		}
+	}
+
+	protected virtual void OnDestroy()
+	{
+		if (mTrackableBehaviour)
+		{
+			mTrackableBehaviour.UnregisterOnTrackableStatusChanged(OnTrackableStatusChanged);
+		}
+	}
+
+	void OnTrackableStatusChanged(TrackableBehaviour.StatusChangeResult statusChangeResult)
+	{
+		m_PreviousStatus = statusChangeResult.PreviousStatus;
+		m_NewStatus = statusChangeResult.NewStatus;
+
+		Debug.LogFormat("Trackable {0} {1} -- {2}",
+			mTrackableBehaviour.TrackableName,
+			mTrackableBehaviour.CurrentStatus,
+			mTrackableBehaviour.CurrentStatusInfo);
+
+		HandleTrackableStatusChanged();
+	}
+
+	protected virtual void HandleTrackableStatusChanged()
+	{
+		if (!ShouldBeRendered(m_PreviousStatus) &&
+			ShouldBeRendered(m_NewStatus))
+		{
+			OnTrackingFound();
+		}
+		else if (ShouldBeRendered(m_PreviousStatus) &&
+				 !ShouldBeRendered(m_NewStatus))
+		{
+			OnTrackingLost();
+		}
+		else
+		{
+			if (!m_CallbackReceivedOnce && !ShouldBeRendered(m_NewStatus))
+			{
+				// This is the first time we are receiving this callback, and the target is not visible yet.
+				// --> Hide the augmentation.
+				OnTrackingLost();
+			}
+		}
+
+		m_CallbackReceivedOnce = true;
+	}
+
+	protected bool ShouldBeRendered(TrackableBehaviour.Status status)
+	{
+		if (status == TrackableBehaviour.Status.DETECTED ||
+			status == TrackableBehaviour.Status.TRACKED)
+		{
+			// always render the augmentation when status is DETECTED or TRACKED, regardless of filter
+			return true;
+		}
+
+		if (StatusFilter == TrackingStatusFilter.Tracked_ExtendedTracked)
+		{
+			if (status == TrackableBehaviour.Status.EXTENDED_TRACKED)
+			{
+				// also return true if the target is extended tracked
+				return true;
+			}
+		}
+
+		if (StatusFilter == TrackingStatusFilter.Tracked_ExtendedTracked_Limited)
+		{
+			if (status == TrackableBehaviour.Status.EXTENDED_TRACKED ||
+				status == TrackableBehaviour.Status.LIMITED)
+			{
+				// in this mode, render the augmentation even if the target's tracking status is LIMITED.
+				// this is mainly recommended for Anchors.
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	protected virtual void OnTrackingFound()
+	{
+		if (mTrackableBehaviour)
+		{
+			var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
+			var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
+			var canvasComponents = mTrackableBehaviour.GetComponentsInChildren<Canvas>(true);
+
+			// Enable rendering:
+			foreach (var component in rendererComponents)
+				component.enabled = true;
+
+			// Enable colliders:
+			foreach (var component in colliderComponents)
+				component.enabled = true;
+
+			// Enable canvas':
+			foreach (var component in canvasComponents)
+				component.enabled = true;
+		}
+
+		StartCoroutine(InfoTarget(mTrackableBehaviour.TrackableName));
+		CrearPanel();
+		if (OnTargetFound != null)
+			OnTargetFound.Invoke();
+	}
+
+	protected virtual void OnTrackingLost()
+	{
+		if (mTrackableBehaviour)
+		{
+			var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
+			var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
+			var canvasComponents = mTrackableBehaviour.GetComponentsInChildren<Canvas>(true);
+
+			// Disable rendering:
+			foreach (var component in rendererComponents)
+				component.enabled = false;
+
+			// Disable colliders:
+			foreach (var component in colliderComponents)
+				component.enabled = false;
+
+			// Disable canvas':
+			foreach (var component in canvasComponents)
+				component.enabled = false;
+		}
+
+		if (OnTargetLost != null)
+			OnTargetLost.Invoke();
+	}
 
 
-        }
-        else
-        {
-            // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
-            // Vuforia is starting, but tracking has not been lost or found yet
-            // Call OnTrackingLost() to hide the augmentations
-            OnTrackingLost();
-        }
-    }
 
-    #endregion // PUBLIC_METHODS
-
-    #region PROTECTED_METHODS
-
-    protected virtual void OnTrackingFound()
-    {
-        if (mTrackableBehaviour)
-        {
-            var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
-            var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
-            var canvasComponents = mTrackableBehaviour.GetComponentsInChildren<Canvas>(true);
-
-            // Enable rendering:
-            foreach (var component in rendererComponents)
-                component.enabled = true;
-
-            // Enable colliders:
-            foreach (var component in colliderComponents)
-                component.enabled = true;
-
-            // Enable canvas':
-            foreach (var component in canvasComponents)
-                component.enabled = true;
-			StartCoroutine(InfoTarget(true, mTrackableBehaviour.TrackableName));
-        }
-
-    }
-
-
-    protected virtual void OnTrackingLost()
-    {
-        if (mTrackableBehaviour)
-        {
-            var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
-            var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
-            var canvasComponents = mTrackableBehaviour.GetComponentsInChildren<Canvas>(true);
-
-            // Disable rendering:
-            foreach (var component in rendererComponents)
-                component.enabled = false;
-
-            // Disable colliders:
-            foreach (var component in colliderComponents)
-                component.enabled = false;
-
-            // Disable canvas':
-            foreach (var component in canvasComponents)
-                component.enabled = false;
-
-         
-        }
-    }
-
-
-    #endregion // PROTECTED_METHODS
-
-
-
-    private IEnumerator InfoTarget(bool target, string nombre)
-    {
-        yield return new WaitForSeconds(0.2f);
-        GameObject gestor = GameObject.FindGameObjectWithTag("GestorJuego");
-        gestor.GetComponent<OptionController>().InitBotones(nombre);
+	private IEnumerator InfoTarget(string nombre)
+	{
+		yield return new WaitForSeconds(0.2f);
+		GameObject panel = GameObject.FindGameObjectWithTag("GestorPreguntas");
+		panel.GetComponent<OptionController>().InitBotones(nombre);
 		GameObject infoPanel = GameObject.FindGameObjectWithTag("Panel");
 		infoPanel.GetComponent<InfoController>().SetNombreAnimal(nombre);
 
 	}
-}
 
+
+
+	//Creamos el panel informativo
+	private void CrearPanel()
+	{
+		if (panelInformativo != null)
+		{
+			Debug.LogError("Estoy creando el panel");
+			Transform myModelTrf = GameObject.Instantiate(panelInformativo) as Transform;
+
+			if(myModelTrf != null) Debug.LogError("Objeto creado");
+			myModelTrf.parent = mTrackableBehaviour.transform;
+			myModelTrf.localPosition = new Vector3(-5f, 5f, 0f);
+			myModelTrf.localRotation = Quaternion.identity;
+			myModelTrf.localScale = new Vector3(900f, 900f, 900f);
+	
+			myModelTrf.gameObject.active = true;
+		}
+	}
+
+
+}

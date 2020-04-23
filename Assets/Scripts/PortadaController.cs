@@ -6,15 +6,12 @@ using UnityEngine.SceneManagement;
 public class PortadaController : MonoBehaviour
 {
 
+	public string escena;
 
-
-
-	private void Update()
+	public void Jugar()
 	{
-		
+	
+		SceneManager.LoadScene(escena);
 	}
-	public void LanzarJuego() {
 
-		SceneManager.LoadScene("GamePlay");
-	}
 }

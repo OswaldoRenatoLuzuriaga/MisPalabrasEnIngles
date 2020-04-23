@@ -5,19 +5,23 @@ using UnityEngine;
 public class SoundSystem : MonoBehaviour
 {
 	#region PUBLIC_VARIABLES
-	public static SoundSystem sonido;
+	public static SoundSystem soundEffect;
 	public AudioSource audioSource;
-	public AudioClip audioClipTimer;
-	public AudioClip audioClipExplosion;
+	public AudioClip audioTimer;
+	public AudioClip audioExplosion;
+	public AudioClip audioPanda;
+	public AudioClip audioFox;
+
+
 	#endregion
 
 	#region UNITY_MONOBEHAVIOUR_METHODS
 	private void Awake()
 	{
-		if (SoundSystem.sonido == null) {
+		if (SoundSystem.soundEffect == null) {
 
-			SoundSystem.sonido = this;
-		}else if (SoundSystem.sonido != this){
+			SoundSystem.soundEffect = this;
+		}else if (SoundSystem.soundEffect != this){
 
 			Destroy(this);
 		}
@@ -27,25 +31,48 @@ public class SoundSystem : MonoBehaviour
 	#region PRIVATE_METHODS
 	private void OnDestroy()
 	{
-		if (SoundSystem.sonido == null)
+		if (SoundSystem.soundEffect == null)
 		{
 
-			SoundSystem.sonido = null;
+			SoundSystem.soundEffect = null;
 		}
 		
 	}
 	#endregion
 
 	#region PUBLIC_METHODS
-	public void PlayAudioTimer() {
-		PlayAudioClip(audioClipTimer);
+	public void Timer() {
+		PlayAudioClip(audioTimer);
 	}
 
 
-	public void PlayAudioExplosion()
+	public void Explosion()
 	{
-		PlayAudioClip(audioClipExplosion);
+		PlayAudioClip(audioExplosion);
 	}
+
+
+	public void Personaje(string nombre)
+	{
+
+		switch (nombre)
+		{
+
+			case "Panda":
+				{
+					PlayAudioClip(audioPanda);
+					break;
+				}
+			case "Fox":
+				{
+					PlayAudioClip(audioFox);
+					break;
+				}
+
+		}
+	}
+
+
 
 
 	public void PlayAudioClip(AudioClip audioClip) {

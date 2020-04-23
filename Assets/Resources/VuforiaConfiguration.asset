@@ -13,32 +13,30 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: Ae2fOmD/////AAABmYdiWqhnNk5Jhyp1/xzZzkQUaI7IfkT2fbUCovf5Kr6EFJZ1X7S1P1wDEqH1kQcewspHVV9A6wzdLIGIWmaCXyD0WIvSm3R3GL75kX22pRWe2gJlF3oAh0QV9KNI/TtQxXCVAUptYTBkin0ESEfWhDhSx227PCOCHA4aD6uSE/fOLeKtQj24rkGpPSfbFsXJzXdlv3yExNLy79h8tHo94YwDxX68QWJyMQlFH8B53XGmSktOGHdzH5JE6z9dcyY2fM/mCDuaKGQssQnChn66V4Y6XQ9OSotZUV3munXZugFM21QnPPqQHdKiEkPt6MF00tdVduIC26ETrnL0wofzUEUuxlz/tDpGDEEI+m+hNGZ2
+    vuforiaLicenseKey: AVA1c53/////AAABmf14t/W1xESSlTttOa8GZJ9ekMG/of+8dIUxpaamTQ39dQdGBqJbJCi14NinyIJg9dJ6J8GvDT8lLFuEJXT6EX/dmnPmLJBpuBeKXWgewFNlzI1vgxoZ7GRJW6Nzm6qZ8PXFXcQqHhMUQyiQaWjVX6MHny/+YH7FvpvDNN1lv04UjDHVK3tOqOWQE59FDWUZJQyLPH++o4BHRJxgIjicBOTfBppJxKtqd5Sf7q82Lszdms6JERsyOWPnwl11+BBlLMcyHiqaSCrhtLm0OPPqtBvhbu02mGSudjEx0vR4BTwZqRjNRtT4WtI3w4r2xZZyW0j53Ou+h4cJaoaqs9SobnRFgQ7AOOHkGrrM+HjVeG7n
     ufoLicenseKey: QVFab0czYi8vLy8vQUFBQUtQQlBHb2t3MVVrZ2wrY0p3bGhCbnVOdlZjdU53MHhsVlFQbGE0bXJDS2s4ZzNuT1BEOS9iT0g1YWJhRm9JTDNKNWRXSTh1K0o1VzU1NlBodXRaTmRTL09mWDA5VEFVRXFGZDd0TjVYRWhhWHFyTGkvWk5BSGN1T1JvODMxTnoxYmlaNXZOUzNISEc5dHp0SDlMQ3JSVklHbTZTK0VWWXNsdHJjVGprUGliZUtOb254Tnc2MXgzL2l5VmYwV3luVWpZaTJuRnJpd3h0UWcxdFQxQmN3ZEs4a0NxT3RMSGFqeHpkdHpXOFgyR01qSDNvaHQ5Nlh1dHdTZmk1eGtlZUdJMGZETHBEQUo4c3cyZWFvTTg2bzg2a25pRGowbVVxQWYwdDEzb2duS0tmbzJRaDJ1MXViM1o2eFZaMStvbGN1WXRwOFpBMTRKQmFSUWl2Vy9vNlBnQXdPam4zdnpBVWtUa1ZqaHV0cVlRM3A=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 5
+    maxSimultaneousObjectTargets: 5
+    virtualSceneScaleFactor: 5
     useDelayedLoadingObjectTargets: 0
-    modelTargetRecoWhileExtendedTracked: 1
-    version: 8.5.9
+    modelTargetRecoWhileExtendedTracked: 0
+    version: 9.0.12
     eulaAcceptedVersions: '{"Values":["8.3","0.0","9.0","8.5","8.6"]}'
+    modelTargetMode: 0
   database:
-    disableModelExtraction: 0
+    disableModelExtraction: 1
   videoBackground:
     numDivisions: 2
     videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
       type: 3}
     videoBackgroundEnabled: 1
   deviceTracker:
-    autoInitTracker: 0
     autoStartTracker: 0
-    arcoreRequirement: 0
+    arcoreRequirement: 1
     autoImportArcore: 0
-  smartTerrain:
-    autoInitTracker: 0
-    autoStartTracker: 0
+  playmode:
+    playModeType: 0
   webcam:
-    deviceNameSetInEditor: 
-    turnOffWebCam: 0
     renderTextureLayer: 30

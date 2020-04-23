@@ -80,7 +80,7 @@ public class TimerController : MonoBehaviour
 	}
 	private void GameOver() {
 		StartCoroutine(LanzarGameOver());
-		SoundSystem.sonido.PlayAudioTimer();
+		SoundSystem.soundEffect.Timer();
 		segundero.text = "" + 0;
 		
 	}

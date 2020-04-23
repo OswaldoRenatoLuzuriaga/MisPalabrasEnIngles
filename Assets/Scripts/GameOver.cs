@@ -1,30 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuforia;
 using System.CodeDom;
+using UnityEngine.SceneManagement;
+
 
 public class GameOver : MonoBehaviour
 {
+	
 
-	private Rigidbody rbd;
-	private float downForce = 20000f;
-	// Start is called before the first frame update
-	void Start()
-    {
-		rbd = GetComponent<Rigidbody>();
+
+	public void Play()
+	{
+		SceneManager.LoadScene("GamePlay");
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-		rbd.constraints = RigidbodyConstraints.None;
-		rbd.velocity = Vector2.zero;
-		rbd.AddForce(Vector2.down * downForce);
+	public void Menu() {
+		SceneManager.LoadScene("Portada");
 	}
 
-	public void LanzarGameOver() {
-		rbd.constraints = RigidbodyConstraints.None;
-		rbd.velocity = Vector2.zero;
-		rbd.AddForce(Vector2.down * downForce);
-	}
 }

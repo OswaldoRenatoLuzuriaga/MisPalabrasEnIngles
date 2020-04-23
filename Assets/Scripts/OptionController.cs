@@ -44,7 +44,7 @@ public class OptionController: MonoBehaviour
 
 
 	private void ActualizaPuntos() {
-		Debug.Log("Estoy actualizando puntos: " + puntos);
+	  
 		puntos++;
 		score.text = "Score: "+ puntos;
     }
@@ -134,12 +134,22 @@ public class OptionController: MonoBehaviour
 		return (nombreButton.Equals(nombreCorrecto)) ? true : false;
 	}
 
+
+	private void OpcionIncorrecta() {
+		button1.gameObject.SetActive(false);
+		button2.gameObject.SetActive(false);
+		button3.gameObject.SetActive(false);
+	}
 	public void PulsarButton1 (){
 
-		if (IsCorrecto(nombre1.text)) {
+		if (IsCorrecto(nombre1.text))
+		{
 			ActualizaPuntos();
 			button2.gameObject.SetActive(false);
 			button3.gameObject.SetActive(false);
+		}
+		else {
+			OpcionIncorrecta();
 		}
 	}
 
@@ -152,6 +162,10 @@ public class OptionController: MonoBehaviour
 			button1.gameObject.SetActive(false);
 			button3.gameObject.SetActive(false);
 		}
+		else
+		{
+			OpcionIncorrecta();
+		}
 	}
 
 
@@ -163,6 +177,10 @@ public class OptionController: MonoBehaviour
 			ActualizaPuntos();
 			button2.gameObject.SetActive(false);
 			button1.gameObject.SetActive(false);
+		}
+		else
+		{
+			OpcionIncorrecta();
 		}
 	}
 

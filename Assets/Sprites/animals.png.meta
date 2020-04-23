@@ -55,8 +55,8 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
-  spriteExtrude: 1
+  spriteMode: 3
+  spriteExtrude: 4
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -65,7 +65,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -130,11 +130,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 848
-        width: 531
-        height: 497
+        y: 943
+        width: 543
+        height: 413
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: animals_1
       rect:
         serializedVersion: 2
-        x: 444
-        y: 396
-        width: 514
-        height: 700
+        x: 532
+        y: 538
+        width: 271
+        height: 559
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: animals_2
       rect:
         serializedVersion: 2
-        x: 841
-        y: 848
-        width: 510
-        height: 513
+        x: 843
+        y: 863
+        width: 508
+        height: 498
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,10 +194,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 0
-        width: 604
-        height: 503
+        width: 646
+        height: 390
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: animals_4
       rect:
         serializedVersion: 2
-        x: 830
+        x: 800
         y: 0
-        width: 545
-        height: 528
+        width: 570
+        height: 417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +230,37 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    outline: []
+    outline:
+    - - {x: -687.5, y: 149}
+      - {x: -687.5, y: 681}
+      - {x: -124.5, y: 681}
+      - {x: -171.5, y: 159}
+    - - {x: 245.5, y: 166}
+      - {x: 196.5, y: 178}
+      - {x: 90.5, y: 681}
+      - {x: 675.5, y: 681}
+      - {x: 676.5, y: 167}
+    - - {x: -681.5, y: -676}
+      - {x: -687.5, y: -159}
+      - {x: -254.5, y: -157}
+      - {x: -76.5, y: -318}
+      - {x: -32.5, y: -676}
+    - - {x: 132.5, y: -681}
+      - {x: 133.5, y: -269}
+      - {x: 331.5, y: -122}
+      - {x: 687.5, y: -121}
+      - {x: 687.5, y: -677}
+    - - {x: -108.5, y: -293}
+      - {x: -179.5, y: -212}
+      - {x: -250.5, y: -114}
+      - {x: -245.5, y: 54}
+      - {x: -170.5, y: 161}
+      - {x: -151.5, y: 250}
+      - {x: -106.5, y: 430}
+      - {x: 107.5, y: 430}
+      - {x: 282.5, y: 26}
+      - {x: 275.5, y: -167}
+      - {x: 107.5, y: -295}
     physicsShape: []
     bones: []
     spriteID: 0405a9507460e5240a0b9b299dbafee0
