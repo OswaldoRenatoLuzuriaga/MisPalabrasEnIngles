@@ -10,6 +10,7 @@ TagManager:
   - Fox
   - PanelOpciones
   - GestorPreguntas
+  - ImageTarget
   layers:
   - Default
   - TransparentFX

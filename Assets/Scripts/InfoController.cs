@@ -10,12 +10,6 @@ public class InfoController : MonoBehaviour
 	public UnityEngine.UI.Image infoImage;
 	public Button backButton;
 
-	
-
-
-
-
-
 
 
 	private Dictionary<string, string> infoAnimales;
@@ -28,10 +22,16 @@ public class InfoController : MonoBehaviour
 
 		infoAnimales = new Dictionary<string, string>();
 		InitAnimales();
-		
 
+		
+		
 	}
 
+
+
+
+
+	
 
 
 	public void SetNombreAnimal(string nombreAnimal)
@@ -79,6 +79,7 @@ public class InfoController : MonoBehaviour
 		infoText.gameObject.SetActive(false);
 		infoImage.gameObject.SetActive(false);
 		backButton.gameObject.SetActive(false);
+
 	}
 
 	public void OnEnabledPanel()
@@ -90,6 +91,7 @@ public class InfoController : MonoBehaviour
 		infoImage.gameObject.SetActive(true);
 		backButton.gameObject.SetActive(true);
 
+	
 	}
 
 }

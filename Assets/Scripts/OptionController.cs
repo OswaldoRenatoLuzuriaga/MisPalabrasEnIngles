@@ -113,7 +113,7 @@ public class OptionController: MonoBehaviour
 			animales.Add("Fox");
 			animales.Add("Sheep");
 			animales.Add("Elephant");
-			animales.Add("Chiken");
+			animales.Add("Chicken");
 			animales.Add("Monkey");
 			animales.Add("Tiger");
 			animales.Add("Duckling");
@@ -136,15 +136,19 @@ public class OptionController: MonoBehaviour
 
 
 	private void OpcionIncorrecta() {
+		SoundSystem.soundEffect.Error();
 		button1.gameObject.SetActive(false);
 		button2.gameObject.SetActive(false);
 		button3.gameObject.SetActive(false);
 	}
+
+
 	public void PulsarButton1 (){
 
 		if (IsCorrecto(nombre1.text))
 		{
 			ActualizaPuntos();
+			SoundSystem.soundEffect.Coin();
 			button2.gameObject.SetActive(false);
 			button3.gameObject.SetActive(false);
 		}
@@ -159,6 +163,7 @@ public class OptionController: MonoBehaviour
 		if (IsCorrecto(nombre2.text))
 		{
 			ActualizaPuntos();
+			SoundSystem.soundEffect.Coin();
 			button1.gameObject.SetActive(false);
 			button3.gameObject.SetActive(false);
 		}
@@ -175,6 +180,7 @@ public class OptionController: MonoBehaviour
 		if (IsCorrecto(nombre3.text))
 		{
 			ActualizaPuntos();
+			SoundSystem.soundEffect.Coin();
 			button2.gameObject.SetActive(false);
 			button1.gameObject.SetActive(false);
 		}

@@ -9,6 +9,8 @@ public class SoundSystem : MonoBehaviour
 	public AudioSource audioSource;
 	public AudioClip audioTimer;
 	public AudioClip audioExplosion;
+	public AudioClip audioCoin;
+	public AudioClip audioError;
 	public AudioClip audioPanda;
 	public AudioClip audioFox;
 
@@ -43,6 +45,16 @@ public class SoundSystem : MonoBehaviour
 	#region PUBLIC_METHODS
 	public void Timer() {
 		PlayAudioClip(audioTimer);
+	}
+
+	public void Coin()
+	{
+		PlayAudioClip(audioCoin);
+	}
+
+	public void Error()
+	{
+		PlayAudioClip(audioError);
 	}
 
 

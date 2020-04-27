@@ -65,13 +65,13 @@ public class PauseController : MonoBehaviour
 
 	public void OnApplicationQuit()
 	{
-		
+	
 #if UNITY_EDITOR
 		EditorApplication.isPlaying = false;
 		SaveState();
 #else
-    Aplication.Quit();
-	SaveState();
+        Application.Quit();
+		SaveState();
 #endif
 
 	}

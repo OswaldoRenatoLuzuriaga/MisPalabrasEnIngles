@@ -150,7 +150,7 @@ public class TargetController : MonoBehaviour
 		}
 
 		StartCoroutine(InfoTarget(mTrackableBehaviour.TrackableName));
-		CrearPanel();
+	
 		if (OnTargetFound != null)
 			OnTargetFound.Invoke();
 	}
@@ -194,23 +194,7 @@ public class TargetController : MonoBehaviour
 
 
 
-	//Creamos el panel informativo
-	private void CrearPanel()
-	{
-		if (panelInformativo != null)
-		{
-			Debug.LogError("Estoy creando el panel");
-			Transform myModelTrf = GameObject.Instantiate(panelInformativo) as Transform;
 
-			if(myModelTrf != null) Debug.LogError("Objeto creado");
-			myModelTrf.parent = mTrackableBehaviour.transform;
-			myModelTrf.localPosition = new Vector3(-5f, 5f, 0f);
-			myModelTrf.localRotation = Quaternion.identity;
-			myModelTrf.localScale = new Vector3(900f, 900f, 900f);
-	
-			myModelTrf.gameObject.active = true;
-		}
-	}
 
 
 }

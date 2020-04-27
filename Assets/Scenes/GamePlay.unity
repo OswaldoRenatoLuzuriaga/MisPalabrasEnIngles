@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 496517320}
   m_Layer: 0
   m_Name: PandaImageTarget
-  m_TagString: Untagged
+  m_TagString: ImageTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2020,7 +2020,7 @@ GameObject:
   - component: {fileID: 1261202539}
   m_Layer: 0
   m_Name: FoxImageTarget
-  m_TagString: Untagged
+  m_TagString: ImageTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4092,6 +4092,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 309736358522249829, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
+    - target: {fileID: 309736358522249818, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: theTrackable
+      value: 
+      objectReference: {fileID: 496517325}
+    - target: {fileID: 309736358522249818, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: myPanel
+      value: 
+      objectReference: {fileID: 1737461150}
     - target: {fileID: 309736358522249829, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4201,6 +4211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InfoPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 309736359356724340, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc0b34929180c24cbd24841f9972714, type: 3}
@@ -4399,6 +4414,16 @@ PrefabInstance:
       propertyPath: audioTimer
       value: 
       objectReference: {fileID: 8300000, guid: 7db3e0e68b7dbb74d9ff366fb4091676, type: 3}
+    - target: {fileID: 4339069229526968456, guid: ee7b6b9f3350c204bba831ca189a8af7,
+        type: 3}
+      propertyPath: audioCoin
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d1b53f93a5821e40a032fd84d0b8ec0, type: 3}
+    - target: {fileID: 4339069229526968456, guid: ee7b6b9f3350c204bba831ca189a8af7,
+        type: 3}
+      propertyPath: audioError
+      value: 
+      objectReference: {fileID: 8300000, guid: 348df741a5b09674ba3c94b595ec6f55, type: 3}
     - target: {fileID: 4339069229526968457, guid: ee7b6b9f3350c204bba831ca189a8af7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4726,6 +4751,11 @@ PrefabInstance:
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[9].outSlope
       value: -0.002000801
       objectReference: {fileID: 0}
+    - target: {fileID: 4339069229526968471, guid: ee7b6b9f3350c204bba831ca189a8af7,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.61
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee7b6b9f3350c204bba831ca189a8af7, type: 3}
 --- !u!1001 &4542911157224070652
@@ -4807,12 +4837,12 @@ PrefabInstance:
     - target: {fileID: 9213582495028829548, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495028829548, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495102977499, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
@@ -4924,45 +4954,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9213582495102977502, guid: 214d230de9f7e664d8dfd7563a8bd371,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9213582495508966618, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495508966618, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495508966618, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495518810413, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495518810413, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495518810413, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495857068874, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495857068874, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214d230de9f7e664d8dfd7563a8bd371, type: 3}
