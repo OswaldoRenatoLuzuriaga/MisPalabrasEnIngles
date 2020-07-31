@@ -18,6 +18,9 @@ public class OptionController: MonoBehaviour
 	public Text nombre2;
 	public Text nombre3;
 
+    public Image fail1;
+    public Image fail2;
+    public Image fail3;
 
 	private List<string> animales;
     private int  puntos;
@@ -26,11 +29,6 @@ public class OptionController: MonoBehaviour
 
 	#region UNITY_MONOBEHAVIOUR_METHODS
 
-
-	private void Awake()
-	{
-		
-	}
 
 
 	void Start()
@@ -125,70 +123,96 @@ public class OptionController: MonoBehaviour
 
 
 	}
+
+
+    private  void Activar(Button button, Image image ){
+		//Desactivamos el button
+		Color colorButton = button.GetComponent<Image>().color;
+        colorButton.a += 1;
+		
+        button.GetComponent<Image>().color = colorButton;
+        button.enabled = true;
+
+		//Desactivamos la imagen de error
+
+		Color colorImage = image.color;
+        colorImage.a -= 1;
+        image.color = colorImage;
+	}
+
+
+
+
+    private  void Desactivar(Button button, Image image, Text text){
+		//Desactivamos el button
 	
+		
+		if(button.enabled){
+		Color colorButton = button.GetComponent<Image>().color;
+		colorButton.a -= (float)0.7;
+		button.GetComponent<Image>().color = colorButton;
+		button.enabled = false;
+		}
 
+		//Activamos la imagen de error
 
+		Color colorImage = image.color;
+        colorImage.a += 1;
+        image.color = colorImage;
 
-	private bool IsCorrecto(string nombreButton) {
+		//Desactivamos el texto
+         text.enabled = false;
 
-		return (nombreButton.Equals(nombreCorrecto)) ? true : false;
 	}
 
 
-	private void OpcionIncorrecta() {
-		SoundSystem.soundEffect.Error();
-		button1.gameObject.SetActive(false);
-		button2.gameObject.SetActive(false);
-		button3.gameObject.SetActive(false);
+
+
+
+    private bool isSuccess(Button button){
+
+     
+		if(button.Equals(button1)){
+           return (nombreCorrecto.Equals(nombre1.text))?true:false;
+		}else if(button.Equals(button2)){
+           return (nombreCorrecto.Equals(nombre2.text))?true:false;
+		}else if(button.Equals(button3)){
+           return (nombreCorrecto.Equals(nombre3.text))?true:false;
+		}
+		return false;
+	}
+
+	private void failure(){
+		 SoundSystem.soundEffect.Error();
+		 Desactivar(this.button3, this.fail3,this.nombre3);
+		 Desactivar(this.button2, this.fail2,this.nombre2);
+		 Desactivar(this.button1, this.fail1,this.nombre1);
+		 /*
+		if(button.Equals(button1)){
+            Desactivar(this.button3, this.fail3,this.nombre3);
+			Desactivar(this.button2, this.fail2,this.nombre2);
+		}else if(button.Equals(button2)){
+             Desactivar(this.button3, this.fail3,this.nombre3);
+		     Desactivar(this.button1, this.fail1,this.nombre1);
+		}else if(button.Equals(button3)){
+            Desactivar(this.button2, this.fail2,this.nombre2);
+		    Desactivar(this.button1, this.fail1,this.nombre1);
+		}*/
 	}
 
 
-	public void PulsarButton1 (){
+	public void onClick (Button button){
 
-		if (IsCorrecto(nombre1.text))
+		if (isSuccess(button))
 		{
 			ActualizaPuntos();
-			SoundSystem.soundEffect.Coin();
-			button2.gameObject.SetActive(false);
-			button3.gameObject.SetActive(false);
+			SoundSystem.soundEffect.Coin();	
 		}
 		else {
-			OpcionIncorrecta();
+			failure();
 		}
 	}
 
-	public void PulsarButton2()
-	{
-
-		if (IsCorrecto(nombre2.text))
-		{
-			ActualizaPuntos();
-			SoundSystem.soundEffect.Coin();
-			button1.gameObject.SetActive(false);
-			button3.gameObject.SetActive(false);
-		}
-		else
-		{
-			OpcionIncorrecta();
-		}
-	}
-
-
-	public void PulsarButton3()
-	{
-
-		if (IsCorrecto(nombre3.text))
-		{
-			ActualizaPuntos();
-			SoundSystem.soundEffect.Coin();
-			button2.gameObject.SetActive(false);
-			button1.gameObject.SetActive(false);
-		}
-		else
-		{
-			OpcionIncorrecta();
-		}
-	}
 
 
 
@@ -197,7 +221,9 @@ public class OptionController: MonoBehaviour
 	public void InitBotones(string nombreAnimal) {
 		InicializarNombres();
 		StartCoroutine(AddNombre(nombreAnimal));
-	
+
+	    
+	/*
 		if (!button1.gameObject.activeInHierarchy)
 		{
 			button1.gameObject.SetActive(true);
@@ -209,7 +235,9 @@ public class OptionController: MonoBehaviour
 	    if (!button3.gameObject.activeInHierarchy)
 		{
 			button3.gameObject.SetActive(true);
-		}
+		}*/
+
+		
 
 		
 	}

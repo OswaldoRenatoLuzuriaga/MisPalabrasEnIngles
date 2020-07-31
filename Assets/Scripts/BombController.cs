@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
+
 
 
 public class BombController: MonoBehaviour
@@ -10,7 +12,7 @@ public class BombController: MonoBehaviour
 	
 
     //Variable de Fuerza de caida
-    private float downForce = 30000f;
+    private float downForce = 40000f;
     private bool useHelp;
 
 
@@ -28,6 +30,10 @@ public class BombController: MonoBehaviour
 	public Button button1;
 	public Button button2;
 	public Button button3;
+
+    public Image fail1;
+    public Image fail2;
+    public Image fail3;
 
 	public Text optionText1;
 	public Text optionText2;
@@ -52,7 +58,8 @@ public class BombController: MonoBehaviour
         //Lanzamos la granada, anulando los constrains y estableciendo la velocidad de caida
         if (useHelp)
         {
-			StartCoroutine(ActivarBomba());
+			//StartCoroutine(ActivarBomba());
+            ActivarImagen(this.bombImage);
 			rb2d.constraints = RigidbodyConstraints2D.None;
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(Vector2.down * downForce);
@@ -68,11 +75,8 @@ public class BombController: MonoBehaviour
         StartCoroutine(DesactivarBomba());
         anim.SetTrigger("Explosion");
         SoundSystem.soundEffect.Explosion();
-      /*  anim.SetBool("Exit", true);
-        SoundSystem.sonido.PlayAudioExplosion();*/
-        
         StartCoroutine(FadeButton());
-
+        
        
     }
 
@@ -88,14 +92,26 @@ public class BombController: MonoBehaviour
 
     }
 
-    private IEnumerator ActivarBomba()
-	{
-        yield return new WaitForSeconds(0.1f);
-        Color c = bombImage.color;
-        c.a += 1;
-        bombImage.color = c;
+   
+
+    private void  DesactivarButton(Button button){
+        Color c = button.GetComponent<Image>().color;
+        c.a -= (float)0.7;
+        button.GetComponent<Image>().color = c;
+        button.enabled = false;
 
     }
+
+
+    private void ActivarImagen (Image image){
+     
+        Color c = image.color;
+        c.a += 1;
+        image.color = c;
+        HelpButton.enabled = false;
+
+    }
+    
 
      private IEnumerator FadeButton()
       {
@@ -110,20 +126,31 @@ public class BombController: MonoBehaviour
           if (nombreCorrecto != null)
           {
 			
-              if (nombreCorrecto == optionText1.text)
+              if (nombreCorrecto.Equals(optionText1.text))
               {
-                  button2.gameObject.SetActive(false);
+                
+                  //  button2.gameObject.SetActive(false);
+                    ActivarImagen(this.fail2);
+                    DesactivarButton(this.button2);
+                    optionText2.enabled = false;
+		
               }
               else if (nombreCorrecto.Equals(optionText2.text))
               {
-
-                  button3.gameObject.SetActive(false);
-
+               
+                   //button3.gameObject.SetActive(false);
+                    ActivarImagen(this.fail3);
+                    DesactivarButton(this.button3);
+                    optionText3.enabled = false;
               }
               else if (nombreCorrecto.Equals(optionText3.text))
               {
-
-                  button1.gameObject.SetActive(false);
+                  
+                     //button1.gameObject.SetActive(false);
+                     ActivarImagen(this.fail1);
+                     DesactivarButton(this.button1);
+                    optionText1.enabled = false;
+                   
 
               }
 
@@ -142,15 +169,14 @@ public class BombController: MonoBehaviour
 
     public void LanzarBomba()
     {
-		//Si la bomba no es usada llamada a la courutina
 		if (HelpButton.enabled) {
 			useHelp = true;
 			addHelp.enabled = false;
 			closeHelp.enabled = true;
 		}
 	
-		
-		//	HelpButton.enabled = false;
+
+
 
 	}
 	#endregion

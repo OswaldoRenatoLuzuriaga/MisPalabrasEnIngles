@@ -40,12 +40,9 @@ public class GameOver : MonoBehaviour, ITrackableEventHandler
 	{
 		if (myPanel != null)
 		{
-			//Transform myModelTrf = GameObject.Instantiate(myModelPrefab) as Transform;
+		
 			myPanel.parent = target.transform;
-			/*myModelTrf.localPosition = new Vector3(0f, 0f, 0f);
-			myModelTrf.localRotation = Quaternion.identity;
-			myModelTrf.localScale = new Vector3(0.0005f, 0.0005f, 0.0005f);
-			myModelTrf.gameObject.active = true;*/
+		
 		}
 	}
 

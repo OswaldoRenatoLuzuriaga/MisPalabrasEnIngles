@@ -20,15 +20,6 @@ public class EstadoController : MonoBehaviour
 		}
 	}
 	
-	void Guardar() {
-
-	}
-
-
-
-	void Cargar() {
-
-	}
 }
 
 

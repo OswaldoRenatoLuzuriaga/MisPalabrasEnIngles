@@ -8,17 +8,7 @@ public class MovimientoController : MonoBehaviour
 
 	public Vector3 objetivo;
 	private MovimientoController movimiento;
-	// Start is called before the first frame update
-
-	private void Awake()
-	{
-	
-	}
-	void Start()
-    {
-        
-    }
-
+	// Start is called before the first frame upda
     // Update is called once per frame
     void Update()
     {
