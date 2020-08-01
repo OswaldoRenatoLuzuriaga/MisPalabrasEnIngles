@@ -22,6 +22,11 @@ public class OptionController: MonoBehaviour
     public Image fail2;
     public Image fail3;
 
+    public Text nextCard;
+	public Image panel;
+
+
+    private bool failure;
 	private List<string> animales;
     private int  puntos;
 	private string nombreCorrecto = "";
@@ -125,21 +130,6 @@ public class OptionController: MonoBehaviour
 	}
 
 
-    private  void Activar(Button button, Image image ){
-		//Desactivamos el button
-		Color colorButton = button.GetComponent<Image>().color;
-        colorButton.a += 1;
-		
-        button.GetComponent<Image>().color = colorButton;
-        button.enabled = true;
-
-		//Desactivamos la imagen de error
-
-		Color colorImage = image.color;
-        colorImage.a -= 1;
-        image.color = colorImage;
-	}
-
 
 
 
@@ -147,24 +137,54 @@ public class OptionController: MonoBehaviour
 		//Desactivamos el button
 	
 		
-		if(button.enabled){
+		if(button.enabled ){
 		Color colorButton = button.GetComponent<Image>().color;
 		colorButton.a -= (float)0.7;
 		button.GetComponent<Image>().color = colorButton;
 		button.enabled = false;
 		}
 
-		//Activamos la imagen de error
-
-		Color colorImage = image.color;
-        colorImage.a += 1;
-        image.color = colorImage;
+        if(this.failure){
+	      Color colorImage = image.color;
+          colorImage.a += 1;
+          image.color = colorImage;
+		}
 
 		//Desactivamos el texto
          text.enabled = false;
 
 	}
 
+
+
+    private IEnumerator Activar(Button button, Image image, Text text){
+		
+	
+		
+		yield return new WaitForSeconds(0.1f);
+		if(!button.enabled){
+		Color colorButton = button.GetComponent<Image>().color;
+		colorButton.a += (float)0.7;
+		button.GetComponent<Image>().color = colorButton;
+		button.enabled = true;
+		Color colorImage = image.color;
+        colorImage.a -= 1;
+        image.color = colorImage;
+        text.enabled = true;
+		}
+	}
+
+
+	private void ActivarPanel(){
+	    nextCard.gameObject.SetActive(true);
+	    panel.gameObject.SetActive(true);
+	}
+
+	private void DesactivarPanel(){
+        nextCard.gameObject.SetActive(false);
+	    panel.gameObject.SetActive(false);
+		 this.failure = false;
+	}
 
 
 
@@ -182,22 +202,12 @@ public class OptionController: MonoBehaviour
 		return false;
 	}
 
-	private void failure(){
+	private void isFailure(){
+		 this.failure = true;
 		 SoundSystem.soundEffect.Error();
 		 Desactivar(this.button3, this.fail3,this.nombre3);
 		 Desactivar(this.button2, this.fail2,this.nombre2);
 		 Desactivar(this.button1, this.fail1,this.nombre1);
-		 /*
-		if(button.Equals(button1)){
-            Desactivar(this.button3, this.fail3,this.nombre3);
-			Desactivar(this.button2, this.fail2,this.nombre2);
-		}else if(button.Equals(button2)){
-             Desactivar(this.button3, this.fail3,this.nombre3);
-		     Desactivar(this.button1, this.fail1,this.nombre1);
-		}else if(button.Equals(button3)){
-            Desactivar(this.button2, this.fail2,this.nombre2);
-		    Desactivar(this.button1, this.fail1,this.nombre1);
-		}*/
 	}
 
 
@@ -205,11 +215,16 @@ public class OptionController: MonoBehaviour
 
 		if (isSuccess(button))
 		{
-			ActualizaPuntos();
 			SoundSystem.soundEffect.Coin();	
+			ActualizaPuntos();
+			 Desactivar(this.button3, this.fail3,this.nombre3);
+		     Desactivar(this.button2, this.fail2,this.nombre2);
+		     Desactivar(this.button1, this.fail1,this.nombre1);
+			 ActivarPanel();	
+			
 		}
 		else {
-			failure();
+			isFailure();
 		}
 	}
 
@@ -220,26 +235,11 @@ public class OptionController: MonoBehaviour
 	#region PUBLIC_ METHOD
 	public void InitBotones(string nombreAnimal) {
 		InicializarNombres();
+		DesactivarPanel();
 		StartCoroutine(AddNombre(nombreAnimal));
-
-	    
-	/*
-		if (!button1.gameObject.activeInHierarchy)
-		{
-			button1.gameObject.SetActive(true);
-		}
-		if (!button2.gameObject.activeInHierarchy)
-		{
-			button2.gameObject.SetActive(true);
-		}
-	    if (!button3.gameObject.activeInHierarchy)
-		{
-			button3.gameObject.SetActive(true);
-		}*/
-
-		
-
-		
+		StartCoroutine(Activar(this.button3, this.fail3,this.nombre3));
+		StartCoroutine(Activar(this.button2, this.fail2,this.nombre2));
+		StartCoroutine(Activar(this.button1, this.fail1,this.nombre1)); 	
 	}
 
 

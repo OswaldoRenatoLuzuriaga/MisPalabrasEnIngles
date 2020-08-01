@@ -38,6 +38,8 @@ public class InfoController : MonoBehaviour
 	{
 		this.nombreAnimal = nombreAnimal;
 	}
+
+	
 	private void InitAnimales()
 	{
 
@@ -81,6 +83,8 @@ public class InfoController : MonoBehaviour
 		backButton.gameObject.SetActive(false);
 
 	}
+
+
 
 	public void OnEnabledPanel()
 	{
