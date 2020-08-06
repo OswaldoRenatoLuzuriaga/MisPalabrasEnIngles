@@ -47,6 +47,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+Animal pack deluxe.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -55,6 +56,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# Personajes en 3D
+Assets/Animal pack deluxe/
 # Crashlytics generated file
 crashlytics-build.properties
 
