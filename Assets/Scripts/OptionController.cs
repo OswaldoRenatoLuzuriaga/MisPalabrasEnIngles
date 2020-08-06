@@ -23,8 +23,6 @@ public class OptionController: MonoBehaviour
     public Image fail3;
 
     public Image panel;
-
-    private bool failure;
 	private List<string> animales;
     private int  puntos;
 	private string nombreCorrecto = "";
@@ -133,8 +131,6 @@ public class OptionController: MonoBehaviour
 
     private  void offButtom(Button button, Image image, Text text){
 		//Desactivamos el button
-	
-		
 		if(button.enabled ){
 		Color colorButton = button.GetComponent<Image>().color;
 		colorButton.a -= (float)0.7;
@@ -144,11 +140,7 @@ public class OptionController: MonoBehaviour
 
          //panel.gameObject.SetActive(false);
 		 image.gameObject.SetActive(true);
-        /*if(this.failure){
-	      Color colorImage = image.color;
-          colorImage.a += 1;
-          image.color = colorImage;
-		}*/
+       
 
 		//Desactivamos el texto
          text.enabled = false;
@@ -185,7 +177,7 @@ public class OptionController: MonoBehaviour
 	private void DesactivarPanel(){
 //        nextCard.gameObject.SetActive(false);
 	     panel.gameObject.SetActive(false);
-		 this.failure = false;
+		
 	}
 
 
@@ -193,7 +185,7 @@ public class OptionController: MonoBehaviour
 
     private bool isSuccess(Button button){
 
-     
+
 		if(button.Equals(button1)){
            return (nombreCorrecto.Equals(nombre1.text))?true:false;
 		}else if(button.Equals(button2)){
@@ -204,12 +196,24 @@ public class OptionController: MonoBehaviour
 		return false;
 	}
 
-	private void offButtoms(){
-		 this.failure = true;
+	private void activarCorrecto(Button button){
+
+		if(button.Equals(button1)){
+			 offButtom(this.button3, this.fail3,this.nombre3);
+		     offButtom(this.button2, this.fail2,this.nombre2);
+			 button1.enabled = false;
+        
+		}else if(button.Equals(button2)){
+             offButtom(this.button3, this.fail3,this.nombre3);
+			 offButtom(this.button1, this.fail1,this.nombre1);
+			  button2.enabled = false;
+		}else if(button.Equals(button3)){
+            offButtom(this.button2, this.fail2,this.nombre2);
+		    offButtom(this.button1, this.fail1,this.nombre1);
+			 button3.enabled = false;
+	    }
 		
-		 offButtom(this.button3, this.fail3,this.nombre3);
-		 offButtom(this.button2, this.fail2,this.nombre2);
-		 offButtom(this.button1, this.fail1,this.nombre1);
+	
 	}
 
 
@@ -219,14 +223,16 @@ public class OptionController: MonoBehaviour
 		{
 			 SoundSystem.soundEffect.Coin();	
 			 ActualizaPuntos();
-			 offButtoms();
+			 activarCorrecto(button);
 			 //nextCard();	
 			
 		}
 		else {
 			SoundSystem.soundEffect.Error();
-			offButtoms();
-			nextCard();
+		     offButtom(this.button3, this.fail3,this.nombre3);
+		     offButtom(this.button2, this.fail2,this.nombre2);
+			 offButtom(this.button1, this.fail1,this.nombre1);
+			 nextCard();
 		}
 	}
 
