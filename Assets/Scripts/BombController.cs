@@ -6,6 +6,7 @@ using System;
 
 
 
+
 public class BombController: MonoBehaviour
 {
 	#region PRIVATE_VARIABLES
@@ -25,8 +26,7 @@ public class BombController: MonoBehaviour
 	#region PUBLIC_VARIABLES
 	//Boton de ayuda
 	public Button HelpButton;
-    public Image addHelp;
-    public Image closeHelp;
+    public Image close;
 	public Button button1;
 	public Button button2;
 	public Button button3;
@@ -38,16 +38,18 @@ public class BombController: MonoBehaviour
 	public Text optionText1;
 	public Text optionText2;
 	public Text optionText3;
+ 
 	#endregion
 
 	#region UNITY_MONOBEHAVIOUR_METHODS
 	private void Awake()
     {
-        //Inicializamos las referencias de los componentes
-       
+        
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         bombImage = GetComponent<Image>();
+       
+	
         
     }
 
@@ -130,7 +132,8 @@ public class BombController: MonoBehaviour
               {
                 
                   //  button2.gameObject.SetActive(false);
-                    ActivarImagen(this.fail2);
+                    fail2.gameObject.SetActive(true);
+                    //ActivarImagen(this.fail2);
                     DesactivarButton(this.button2);
                     optionText2.enabled = false;
 		
@@ -139,7 +142,8 @@ public class BombController: MonoBehaviour
               {
                
                    //button3.gameObject.SetActive(false);
-                    ActivarImagen(this.fail3);
+                    fail3.gameObject.SetActive(true);
+                   // ActivarImagen(this.fail3);
                     DesactivarButton(this.button3);
                     optionText3.enabled = false;
               }
@@ -147,9 +151,10 @@ public class BombController: MonoBehaviour
               {
                   
                      //button1.gameObject.SetActive(false);
-                     ActivarImagen(this.fail1);
+                      fail1.gameObject.SetActive(true);
+                    // ActivarImagen(this.fail1);
                      DesactivarButton(this.button1);
-                    optionText1.enabled = false;
+                      optionText1.enabled = false;
                    
 
               }
@@ -171,8 +176,7 @@ public class BombController: MonoBehaviour
     {
 		if (HelpButton.enabled) {
 			useHelp = true;
-			addHelp.enabled = false;
-			closeHelp.enabled = true;
+			close.gameObject.SetActive(true);
 		}
 	
 
