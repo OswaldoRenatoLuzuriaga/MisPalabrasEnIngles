@@ -21,6 +21,8 @@ public class PauseController : MonoBehaviour
 
 	public AudioMixer masterMixer;
 
+	public GameObject panel;
+
     void Start()
     {
 		canvasPause = GetComponent<Canvas>();
@@ -46,7 +48,10 @@ public class PauseController : MonoBehaviour
 
 	public void Pausa() {
 		//Habilita o deshabilita si el canvas esta habilitado
-		canvasPause.enabled = !canvasPause.enabled;
+		//canvasPause.enabled = !canvasPause.enabled;
+//		canvasPause.gameObject.SetActive(true);
+        canvasPause.enabled = true;
+		Debug.LogError("Estoy pausando el tiempo");
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 		paused.TransitionTo(0.01f);
 	}
@@ -54,7 +59,8 @@ public class PauseController : MonoBehaviour
 
 
 	public void Play() {
-		canvasPause.enabled = !canvasPause.enabled;
+		 canvasPause.enabled = false;
+		//canvasPause.gameObject.SetActive(false);
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 		SaveState();
 		play.TransitionTo(0.01f);
