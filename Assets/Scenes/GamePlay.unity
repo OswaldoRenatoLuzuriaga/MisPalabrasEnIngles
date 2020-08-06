@@ -1439,8 +1439,7 @@ MonoBehaviour:
   tiempoActual: 0
   healthBar: {fileID: 262616215}
   ayuda1: {fileID: 1588928402}
-  helpAdd: {fileID: 0}
-  helpClose: {fileID: 526708618}
+  close: {fileID: 526708618}
   camaraGameOver: {fileID: 0}
 --- !u!95 &842846675
 Animator:
@@ -4072,7 +4071,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 4098
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -5986,7 +5985,7 @@ PrefabInstance:
     - target: {fileID: 9213582495102977502, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495102977503, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
@@ -6036,7 +6035,7 @@ PrefabInstance:
     - target: {fileID: 9213582495887903936, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214d230de9f7e664d8dfd7563a8bd371, type: 3}

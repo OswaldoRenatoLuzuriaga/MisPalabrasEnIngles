@@ -12,15 +12,16 @@ public class TimerController : MonoBehaviour
 	public float tiempoActual;
 	public Image healthBar;
 	public Button ayuda1;
-	public Image helpAdd;
-	public Image helpClose;
+	
+	public Image close;
+	private float peso;
 
 	public GameObject camaraGameOver;
 	#endregion
 
 
 	#region PRIVATE_VARIABLES
-	private float timeMax = 30f;
+	private float timer = 120f;
 	private bool isButtonHelp;
 	private Animator anim;
 	#endregion
@@ -30,10 +31,12 @@ public class TimerController : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+
 		isButtonHelp = false;
 		tiempoActual = 0;
 		ActualizarTiempo();
 		anim = GetComponent<Animator>();
+		peso = 30;
 
 	}
 
@@ -41,20 +44,20 @@ public class TimerController : MonoBehaviour
 	void Update()
 	{
 		//Actualizamos el tiempo
-		timeMax -= Time.deltaTime;
+		timer -= Time.deltaTime;
 
-		segundero.text = " " + timeMax.ToString("f0");
+		segundero.text = " " + timer.ToString("f0");
 
 		//Actualizamos la barra de salud
-		tiempoActual += Time.deltaTime / 30;
+		tiempoActual += Time.deltaTime / 120;
 		ActualizarTiempo();
 
-		if (timeMax <= 0) {
+		if (timer <= 0) {
 			enabled = false;
 			GameOver();
 			
 		}
-		if (timeMax <= 11 && timeMax > 0)
+		if (timer <= 11 && timer > 0)
 		{
 			Vibrar();
 		}
@@ -100,8 +103,8 @@ public class TimerController : MonoBehaviour
 		//Desabilitamos el boton de ayuda si este ya ha sido usado
 		if (isButtonHelp)
 		{
-			helpAdd.enabled = false;
-			helpClose.enabled = true;
+			close.gameObject.SetActive(true);
+		
 		}
 
 	}
@@ -111,11 +114,11 @@ public class TimerController : MonoBehaviour
 	#region PUBLIC_METHODS
 	public void AddTiempo() {
 
-		if (this.timeMax <= 20 && !isButtonHelp)
+		if (this.timer <= 90 && !isButtonHelp)
 		{
-			this.timeMax += 5f;
+			this.timer += peso;
 			isButtonHelp = true;
-			tiempoActual -= 0.16f;
+			tiempoActual -= (peso / timer);
 			ActualizarTiempo();
 		}
 

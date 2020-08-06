@@ -50,7 +50,7 @@ public class PauseController : MonoBehaviour
 		//Habilita o deshabilita si el canvas esta habilitado
 		//canvasPause.enabled = !canvasPause.enabled;
 //		canvasPause.gameObject.SetActive(true);
-        canvasPause.enabled = true;
+        canvasPause.enabled = false;
 		Debug.LogError("Estoy pausando el tiempo");
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 		paused.TransitionTo(0.01f);
@@ -59,7 +59,7 @@ public class PauseController : MonoBehaviour
 
 
 	public void Play() {
-		 canvasPause.enabled = false;
+		 canvasPause.enabled = true;
 		//canvasPause.gameObject.SetActive(false);
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 		SaveState();
