@@ -61,3 +61,7 @@ Assets/Animal pack deluxe/
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Animal pack deluxe
+
+.fake
+.ionide

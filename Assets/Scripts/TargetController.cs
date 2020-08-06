@@ -149,7 +149,7 @@ public class TargetController : MonoBehaviour
 				component.enabled = true;
 		}
 
-		StartCoroutine(InfoTarget(mTrackableBehaviour.TrackableName));
+		StartCoroutine(capturaTarget(mTrackableBehaviour.TrackableName));
 	
 		if (OnTargetFound != null)
 			OnTargetFound.Invoke();
@@ -182,11 +182,13 @@ public class TargetController : MonoBehaviour
 
 
 
-	private IEnumerator InfoTarget(string nombre)
+	private IEnumerator capturaTarget(string nombre)
 	{
 		yield return new WaitForSeconds(0.2f);
-		GameObject panel = GameObject.FindGameObjectWithTag("GestorPreguntas");
-		panel.GetComponent<OptionController>().InitBotones(nombre);
+		GameObject panelDeOpciones= GameObject.FindGameObjectWithTag("GestorPreguntas");
+		panelDeOpciones.GetComponent<OptionController>().InitButtom(nombre);
+
+
 		//Capturo el nombre del animal que esta detectando
 		GameObject infoPanel = GameObject.FindGameObjectWithTag("Panel");
 		infoPanel.GetComponent<InfoController>().SetNombreAnimal(nombre);

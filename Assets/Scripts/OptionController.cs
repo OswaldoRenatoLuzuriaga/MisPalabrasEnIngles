@@ -22,9 +22,7 @@ public class OptionController: MonoBehaviour
     public Image fail2;
     public Image fail3;
 
-    public Text nextCard;
-	public Image panel;
-
+    public Image panel;
 
     private bool failure;
 	private List<string> animales;
@@ -133,7 +131,7 @@ public class OptionController: MonoBehaviour
 
 
 
-    private  void Desactivar(Button button, Image image, Text text){
+    private  void offButtom(Button button, Image image, Text text){
 		//Desactivamos el button
 	
 		
@@ -144,11 +142,13 @@ public class OptionController: MonoBehaviour
 		button.enabled = false;
 		}
 
-        if(this.failure){
+         //panel.gameObject.SetActive(false);
+		 image.gameObject.SetActive(true);
+        /*if(this.failure){
 	      Color colorImage = image.color;
           colorImage.a += 1;
           image.color = colorImage;
-		}
+		}*/
 
 		//Desactivamos el texto
          text.enabled = false;
@@ -157,7 +157,7 @@ public class OptionController: MonoBehaviour
 
 
 
-    private IEnumerator Activar(Button button, Image image, Text text){
+    private IEnumerator onButtom(Button button, Image image, Text text){
 		
 	
 		
@@ -167,22 +167,24 @@ public class OptionController: MonoBehaviour
 		colorButton.a += (float)0.7;
 		button.GetComponent<Image>().color = colorButton;
 		button.enabled = true;
-		Color colorImage = image.color;
-        colorImage.a -= 1;
-        image.color = colorImage;
+
+		
+        image.gameObject.SetActive(false);
+
+
         text.enabled = true;
 		}
 	}
 
 
-	private void ActivarPanel(){
-	    nextCard.gameObject.SetActive(true);
+	private void nextCard(){
 	    panel.gameObject.SetActive(true);
+	    
 	}
 
 	private void DesactivarPanel(){
-        nextCard.gameObject.SetActive(false);
-	    panel.gameObject.SetActive(false);
+//        nextCard.gameObject.SetActive(false);
+	     panel.gameObject.SetActive(false);
 		 this.failure = false;
 	}
 
@@ -202,12 +204,12 @@ public class OptionController: MonoBehaviour
 		return false;
 	}
 
-	private void isFailure(){
+	private void offButtoms(){
 		 this.failure = true;
-		 SoundSystem.soundEffect.Error();
-		 Desactivar(this.button3, this.fail3,this.nombre3);
-		 Desactivar(this.button2, this.fail2,this.nombre2);
-		 Desactivar(this.button1, this.fail1,this.nombre1);
+		
+		 offButtom(this.button3, this.fail3,this.nombre3);
+		 offButtom(this.button2, this.fail2,this.nombre2);
+		 offButtom(this.button1, this.fail1,this.nombre1);
 	}
 
 
@@ -215,16 +217,16 @@ public class OptionController: MonoBehaviour
 
 		if (isSuccess(button))
 		{
-			SoundSystem.soundEffect.Coin();	
-			ActualizaPuntos();
-			 Desactivar(this.button3, this.fail3,this.nombre3);
-		     Desactivar(this.button2, this.fail2,this.nombre2);
-		     Desactivar(this.button1, this.fail1,this.nombre1);
-			 ActivarPanel();	
+			 SoundSystem.soundEffect.Coin();	
+			 ActualizaPuntos();
+			 offButtoms();
+			 //nextCard();	
 			
 		}
 		else {
-			isFailure();
+			SoundSystem.soundEffect.Error();
+			offButtoms();
+			nextCard();
 		}
 	}
 
@@ -233,13 +235,13 @@ public class OptionController: MonoBehaviour
 
 	//Inicializamos los butones que esten desactivados
 	#region PUBLIC_ METHOD
-	public void InitBotones(string nombreAnimal) {
+	public void InitButtom(string nombreAnimal) {
 		InicializarNombres();
 		DesactivarPanel();
 		StartCoroutine(AddNombre(nombreAnimal));
-		StartCoroutine(Activar(this.button3, this.fail3,this.nombre3));
-		StartCoroutine(Activar(this.button2, this.fail2,this.nombre2));
-		StartCoroutine(Activar(this.button1, this.fail1,this.nombre1)); 	
+		StartCoroutine(onButtom(this.button3, this.fail3,this.nombre3));
+		StartCoroutine(onButtom(this.button2, this.fail2,this.nombre2));
+		StartCoroutine(onButtom(this.button1, this.fail1,this.nombre1)); 	
 	}
 
 
