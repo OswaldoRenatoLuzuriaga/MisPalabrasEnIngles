@@ -2946,12 +2946,12 @@ PrefabInstance:
     - target: {fileID: 9213582495028829548, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495028829548, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495102977499, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
@@ -3066,7 +3066,7 @@ PrefabInstance:
     - target: {fileID: 9213582495102977502, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495102977503, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
@@ -3076,32 +3076,32 @@ PrefabInstance:
     - target: {fileID: 9213582495508966618, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495508966618, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495508966618, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495518810413, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495518810413, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495518810413, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495540284061, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
@@ -3126,12 +3126,12 @@ PrefabInstance:
     - target: {fileID: 9213582495857068874, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495857068874, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495890667945, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
@@ -5160,7 +5160,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1737461153}
-        m_MethodName: OnEnabledPanel
+        m_MethodName: OnPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5681,6 +5681,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1430441195}
     m_Modifications:
+    - target: {fileID: 309736357824659144, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 309736357824659144, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 309736358522249818, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: panelInformativo
@@ -5697,6 +5707,16 @@ PrefabInstance:
       propertyPath: myPanel
       value: 
       objectReference: {fileID: 1737461150}
+    - target: {fileID: 309736358522249818, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: close
+      value: 
+      objectReference: {fileID: 1107960564}
+    - target: {fileID: 309736358522249818, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: helpButton
+      value: 
+      objectReference: {fileID: 2043574913}
     - target: {fileID: 309736358522249829, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5811,6 +5831,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 309736359559712482, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3231886285957611261, guid: 1b354e12ed32fe847aa041e1c5158d42,
+        type: 3}
+    - target: {fileID: 309736359559712483, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OffPanel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc0b34929180c24cbd24841f9972714, type: 3}
@@ -6023,7 +6054,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioExplosion
       value: 
-      objectReference: {fileID: 8300000, guid: 49d2f44d00527b644880e130714ad371, type: 3}
+      objectReference: {fileID: 8300000, guid: 6bcf007fac91b0b40afb9fb4d968230c, type: 3}
     - target: {fileID: 4339069229526968456, guid: ee7b6b9f3350c204bba831ca189a8af7,
         type: 3}
       propertyPath: audioTimer

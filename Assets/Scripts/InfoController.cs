@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Vuforia;
+using System.Threading;
+using System.IO;
+using TMPro;
 
 public class InfoController : MonoBehaviour
 {
 	public Text infoText;
 	public UnityEngine.UI.Image infoImage;
 	public Button backButton;
+	public Button helpButton;
+
+	public Image close;
 
 
 
@@ -76,17 +81,19 @@ public class InfoController : MonoBehaviour
 
 	}
 
-	public void OnDisablePanel()
+	public void OffPanel()
 	{
 		infoText.gameObject.SetActive(false);
 		infoImage.gameObject.SetActive(false);
 		backButton.gameObject.SetActive(false);
+		close.gameObject.SetActive(false);
+		close.gameObject.SetActive(true);
 
 	}
 
 
 
-	public void OnEnabledPanel()
+	public void OnPanel()
 	{
 		StartCoroutine(InitPanel(nombreAnimal));
 		
@@ -94,6 +101,8 @@ public class InfoController : MonoBehaviour
 		infoText.gameObject.SetActive(true);
 		infoImage.gameObject.SetActive(true);
 		backButton.gameObject.SetActive(true);
+	
+		helpButton.enabled = false;
 
 	
 	}

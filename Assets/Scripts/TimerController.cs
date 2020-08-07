@@ -125,7 +125,7 @@ public class TimerController : MonoBehaviour
 		{
 			this.timer += peso;
 			isButtonHelp = true;
-			tiempoActual -= (peso / timer);
+			tiempoActual -= (peso / 120);
 			ActualizarTiempo();
 		}
 
