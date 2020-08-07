@@ -65,7 +65,7 @@ el botón*/
            canvas.enabled = true;
 		   //Detenemos el juego si esta deshabilitado
 		    UpdateScore();
-		    Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+		    Time.timeScale = 0;
 		    paused.TransitionTo(0.01f);
 	}
 		}
@@ -82,7 +82,7 @@ el botón*/
 
 	  if(canvas.enabled){
         canvas.enabled = false;
-		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+		Time.timeScale = 1;
 		SaveState();
 		play.TransitionTo(0.01f);
 	  }
