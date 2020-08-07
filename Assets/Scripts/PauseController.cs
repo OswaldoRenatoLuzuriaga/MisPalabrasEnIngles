@@ -11,7 +11,8 @@ using UnityEditor;
 public class PauseController : MonoBehaviour
 {
 
-	Canvas canvasPause;
+	Canvas canvas;
+    private Button button;
 
 	public Slider MusicSliderVolume;
 	public Slider EfectSliderVolume;
@@ -21,12 +22,12 @@ public class PauseController : MonoBehaviour
 
 	public AudioMixer masterMixer;
 
-	public GameObject panel;
+	
 
     void Start()
     {
-		canvasPause = GetComponent<Canvas>();
-		canvasPause.enabled = false;
+		canvas = GetComponent<Canvas>();
+		canvas.enabled = false;
 		LoadState();
 	}
 
@@ -46,24 +47,41 @@ public class PauseController : MonoBehaviour
 
 
 
+
+/*Para poder utilizarlo el boton que llame al metodo tiene 
+tiene que tener el compomente canvas group, que nos permitira
+cambiar el alpha a todos los elementos que hay en en el canvas, para el canvas tiene 
+que estar activado así como todos sus hijo este no aparecera hasta que no se pulse 
+el botón*/
+
+
 	public void Pausa() {
 		//Habilita o deshabilita si el canvas esta habilitado
-		//canvasPause.enabled = !canvasPause.enabled;
-//		canvasPause.gameObject.SetActive(true);
-        canvasPause.enabled = false;
-		Debug.LogError("Estoy pausando el tiempo");
-		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
-		paused.TransitionTo(0.01f);
+		if(!canvas.enabled){
+           canvas.enabled = true;
+		   //Detenemos el juego si esta deshabilitado
+		    Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+		    paused.TransitionTo(0.01f);
 	}
+		}
+		
+
+		
+
+
 
 
 
 	public void Play() {
-		 canvasPause.enabled = true;
-		//canvasPause.gameObject.SetActive(false);
+	
+
+	  if(canvas.enabled){
+        canvas.enabled = false;
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 		SaveState();
 		play.TransitionTo(0.01f);
+	  }
+		
 	}
 
 
@@ -81,6 +99,7 @@ public class PauseController : MonoBehaviour
 #endif
 
 	}
+
 
 
 	//Regulan el volumen de los efectos

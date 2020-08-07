@@ -14,6 +14,8 @@ public class TimerController : MonoBehaviour
 	public Button ayuda1;
 	
 	public Image close;
+
+	public Image panel;
 	private float peso;
 
 	public GameObject camaraGameOver;
@@ -95,6 +97,9 @@ public class TimerController : MonoBehaviour
 		healthBar.fillAmount = tiempoActual;
 
 	}
+	
+	
+	
 	private IEnumerator DisableButton()
 	{
 
@@ -112,6 +117,8 @@ public class TimerController : MonoBehaviour
 	#endregion
 
 	#region PUBLIC_METHODS
+
+
 	public void AddTiempo() {
 
 		if (this.timer <= 90 && !isButtonHelp)
