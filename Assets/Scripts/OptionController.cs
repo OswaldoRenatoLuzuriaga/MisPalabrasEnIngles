@@ -136,14 +136,16 @@ public class OptionController: MonoBehaviour
 
 
 
-    private  void OffButtom(Button button, Image image, Text text){
-		//Desactivamos el button
-		if(button.enabled ){
+    private IEnumerator  OffButtom(Button button, Image image, Text text){
+		//Desactivamos el button que
+		yield return new WaitForSeconds(0.1f);
+	
+	     
 		Color colorButton = button.GetComponent<Image>().color;
-		colorButton.a -= (float)0.7;
+		colorButton.a = (float)0.7;
 		button.GetComponent<Image>().color = colorButton;
 		button.enabled = false;
-		}
+		
 
          //panel.gameObject.SetActive(false);
 		 image.gameObject.SetActive(true);
@@ -189,6 +191,11 @@ public class OptionController: MonoBehaviour
 
 
 
+   private void ErrorCard(){
+
+   }
+
+
 
     private bool IsSuccess(Button button){
 
@@ -206,18 +213,27 @@ public class OptionController: MonoBehaviour
 	private void MarkWrong(Button button){
 
 		if(button.Equals(button1)){
-			 OffButtom(this.button3, this.fail3,this.nombre3);
-		     OffButtom(this.button2, this.fail2,this.nombre2);
 			 button1.enabled = false;
+			 /*OffButtom(this.button3, this.fail3,this.nombre3);
+		     OffButtom(this.button2, this.fail2,this.nombre2);*/
+			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
+			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
         
 		}else if(button.Equals(button2)){
-             OffButtom(this.button3, this.fail3,this.nombre3);
-			 OffButtom(this.button1, this.fail1,this.nombre1);
 			  button2.enabled = false;
+             /*OffButtom(this.button3, this.fail3,this.nombre3);
+			 OffButtom(this.button1, this.fail1,this.nombre1);*/
+			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
+			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
+			
 		}else if(button.Equals(button3)){
-             OffButtom(this.button2, this.fail2,this.nombre2);
-		     OffButtom(this.button1, this.fail1,this.nombre1);
 			 button3.enabled = false;
+             /*OffButtom(this.button2, this.fail2,this.nombre2);
+		     OffButtom(this.button1, this.fail1,this.nombre1);*/
+
+			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
+			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
+		
 	    }
 		
 	
@@ -235,10 +251,13 @@ public class OptionController: MonoBehaviour
 			
 		}
 		else {
-			SoundSystem.soundEffect.Error();
-		     OffButtom(this.button3, this.fail3,this.nombre3);
+			 SoundSystem.soundEffect.Error();
+		     /*OffButtom(this.button3, this.fail3,this.nombre3);
 		     OffButtom(this.button2, this.fail2,this.nombre2);
-			 OffButtom(this.button1, this.fail1,this.nombre1);
+			 OffButtom(this.button1, this.fail1,this.nombre1);*/
+			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
+			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
+			  StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
 			 nextCard();
 		}
 	}
