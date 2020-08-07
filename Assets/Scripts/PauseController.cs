@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine.Audio;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -21,6 +23,8 @@ public class PauseController : MonoBehaviour
 	public AudioMixerSnapshot play;
 
 	public AudioMixer masterMixer;
+
+	public Text score;
 
 	
 
@@ -60,6 +64,7 @@ el botón*/
 		if(!canvas.enabled){
            canvas.enabled = true;
 		   //Detenemos el juego si esta deshabilitado
+		    UpdateScore();
 		    Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 		    paused.TransitionTo(0.01f);
 	}
@@ -117,6 +122,13 @@ el botón*/
 		//Llamamos a la variable referenciada del mixer master "MusicVolumen"
 		masterMixer.SetFloat("MusicVolumen", volumen);
 
+	}
+
+
+
+	private void UpdateScore(){
+		GameObject gestor = GameObject.FindGameObjectWithTag("GestorPreguntas");
+		this.score.text = gestor.GetComponent<OptionController>().getScore();
 	}
 
 

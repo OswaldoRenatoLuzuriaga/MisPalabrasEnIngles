@@ -122,7 +122,7 @@ public class BombController: MonoBehaviour
           yield return new WaitForSeconds(0.4f);
 
           GameObject gestor = GameObject.FindGameObjectWithTag("GestorPreguntas");
-          string nombreCorrecto= gestor.GetComponent<OptionController>().GetNombreAnimal();
+          string nombreCorrecto= gestor.GetComponent<OptionController>().GetAnimalName();
 
 
           if (nombreCorrecto != null)

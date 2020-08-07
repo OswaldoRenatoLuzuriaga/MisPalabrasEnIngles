@@ -41,21 +41,28 @@ public class OptionController: MonoBehaviour
 
 	#endregion
 
+    public string getScore(){
+		return "Score: " + puntos;
+	}
 
-	private void ActualizaPuntos() {
+
+	public string GetAnimalName(){
+		return this.nombreCorrecto;
+	}
+
+
+	private void UpdateScore() {
 	  
 		puntos++;
 		score.text = "Score: "+ puntos;
     }
 
 
-	public string GetNombreAnimal()
-	{
-		return this.nombreCorrecto;
-	}
+	
 
 
-	private IEnumerator AddNombre(string nombreAnimal) {
+
+	private IEnumerator AddName(string nombreAnimal) {
 
 
 
@@ -129,7 +136,7 @@ public class OptionController: MonoBehaviour
 
 
 
-    private  void offButtom(Button button, Image image, Text text){
+    private  void OffButtom(Button button, Image image, Text text){
 		//Desactivamos el button
 		if(button.enabled ){
 		Color colorButton = button.GetComponent<Image>().color;
@@ -149,7 +156,7 @@ public class OptionController: MonoBehaviour
 
 
 
-    private IEnumerator onButtom(Button button, Image image, Text text){
+    private IEnumerator OnButtom(Button button, Image image, Text text){
 		
 	
 		
@@ -183,7 +190,7 @@ public class OptionController: MonoBehaviour
 
 
 
-    private bool isSuccess(Button button){
+    private bool IsSuccess(Button button){
 
 
 		if(button.Equals(button1)){
@@ -196,20 +203,20 @@ public class OptionController: MonoBehaviour
 		return false;
 	}
 
-	private void activarCorrecto(Button button){
+	private void MarkWrong(Button button){
 
 		if(button.Equals(button1)){
-			 offButtom(this.button3, this.fail3,this.nombre3);
-		     offButtom(this.button2, this.fail2,this.nombre2);
+			 OffButtom(this.button3, this.fail3,this.nombre3);
+		     OffButtom(this.button2, this.fail2,this.nombre2);
 			 button1.enabled = false;
         
 		}else if(button.Equals(button2)){
-             offButtom(this.button3, this.fail3,this.nombre3);
-			 offButtom(this.button1, this.fail1,this.nombre1);
+             OffButtom(this.button3, this.fail3,this.nombre3);
+			 OffButtom(this.button1, this.fail1,this.nombre1);
 			  button2.enabled = false;
 		}else if(button.Equals(button3)){
-            offButtom(this.button2, this.fail2,this.nombre2);
-		    offButtom(this.button1, this.fail1,this.nombre1);
+             OffButtom(this.button2, this.fail2,this.nombre2);
+		     OffButtom(this.button1, this.fail1,this.nombre1);
 			 button3.enabled = false;
 	    }
 		
@@ -217,21 +224,21 @@ public class OptionController: MonoBehaviour
 	}
 
 
-	public void onClick (Button button){
+	public void OnClick (Button button){
 
-		if (isSuccess(button))
+		if (IsSuccess(button))
 		{
 			 SoundSystem.soundEffect.Coin();	
-			 ActualizaPuntos();
-			 activarCorrecto(button);
-			 //nextCard();	
+			 UpdateScore();
+			 MarkWrong(button);
+			
 			
 		}
 		else {
 			SoundSystem.soundEffect.Error();
-		     offButtom(this.button3, this.fail3,this.nombre3);
-		     offButtom(this.button2, this.fail2,this.nombre2);
-			 offButtom(this.button1, this.fail1,this.nombre1);
+		     OffButtom(this.button3, this.fail3,this.nombre3);
+		     OffButtom(this.button2, this.fail2,this.nombre2);
+			 OffButtom(this.button1, this.fail1,this.nombre1);
 			 nextCard();
 		}
 	}
@@ -244,10 +251,10 @@ public class OptionController: MonoBehaviour
 	public void InitButtom(string nombreAnimal) {
 		InicializarNombres();
 		DesactivarPanel();
-		StartCoroutine(AddNombre(nombreAnimal));
-		StartCoroutine(onButtom(this.button3, this.fail3,this.nombre3));
-		StartCoroutine(onButtom(this.button2, this.fail2,this.nombre2));
-		StartCoroutine(onButtom(this.button1, this.fail1,this.nombre1)); 	
+		StartCoroutine(AddName(nombreAnimal));
+		StartCoroutine(OnButtom(this.button3, this.fail3,this.nombre3));
+		StartCoroutine(OnButtom(this.button2, this.fail2,this.nombre2));
+		StartCoroutine(OnButtom(this.button1, this.fail1,this.nombre1)); 	
 	}
 
 
