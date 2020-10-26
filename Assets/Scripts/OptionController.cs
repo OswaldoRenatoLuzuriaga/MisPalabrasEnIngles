@@ -178,8 +178,11 @@ public class OptionController: MonoBehaviour
 	}
 
 
-	private void nextCard(){
+	private IEnumerator  nextCard(){
+		yield return new WaitForSeconds(0.5f);
 	    panel.gameObject.SetActive(true);
+		
+		
 	    
 	}
 
@@ -247,18 +250,18 @@ public class OptionController: MonoBehaviour
 			 SoundSystem.soundEffect.Coin();	
 			 UpdateScore();
 			 MarkWrong(button);
-			
+			 StartCoroutine( nextCard());
+		
 			
 		}
 		else {
 			 SoundSystem.soundEffect.Error();
-		     /*OffButtom(this.button3, this.fail3,this.nombre3);
-		     OffButtom(this.button2, this.fail2,this.nombre2);
-			 OffButtom(this.button1, this.fail1,this.nombre1);*/
+		     
 			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
 			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
-			  StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
-			 nextCard();
+			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
+			 StartCoroutine(nextCard());
+			 
 		}
 	}
 

@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " \xA1Error! \nPrueba con otra carta."
+  m_text: "\xA1Pasa a la siguiente carta!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 829fc39b13ef69741be514fa20bbc690, type: 2}
   m_sharedMaterial: {fileID: -123725882329136981, guid: 829fc39b13ef69741be514fa20bbc690,
@@ -2438,7 +2438,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 10
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2462,12 +2462,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 29.695454}
   m_textInfo:
     textComponent: {fileID: 1279988374}
-    characterCount: 32
+    characterCount: 27
     spriteCount: 0
-    spaceCount: 6
-    wordCount: 6
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
@@ -5986,6 +5986,11 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 1133286450}
+    - target: {fileID: 4126559123341892844, guid: b60921fd7aeb3e344a1e1d5f4f6c5c73,
+        type: 3}
+      propertyPath: textNextPanel
+      value: 
+      objectReference: {fileID: 1279988374}
     - target: {fileID: 4126559123341892845, guid: b60921fd7aeb3e344a1e1d5f4f6c5c73,
         type: 3}
       propertyPath: m_LocalPosition.x
