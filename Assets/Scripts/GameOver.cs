@@ -1,59 +1,74 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-using Vuforia;
-using System.CodeDom;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System.Net.Http;
 
+using System.Collections;
 
-public class GameOver : MonoBehaviour, ITrackableEventHandler
+using UnityEngine.UI;
+using System.Threading;
+using System.IO;
+using TMPro;
+using Proyecto26;
+public class GameOver : MonoBehaviour
 {
-	private TrackableBehaviour target;
-	public Transform myPanel;
+	
+	public TextMeshProUGUI score;
+	//public TextMeshProUGUI record;
+	private HttpClient _httpClient;
 
 
-	void Star() {
+	public void Star() {
 
-		target = GetComponent<TrackableBehaviour>();
-		if (target)
-		{
-			target.RegisterTrackableEventHandler(this);
-		}
+	    _httpClient = new HttpClient();
+	
+	
+		Debug.Log("El estado final es:-> " + EstadoController.GetScore());
+		this.score.text = EstadoController.GetScore();
+		/*if(this.record.text != this.score.text)
+        {
+			this.record.text = EstadoController.GetRecord();
+        }
+        else
+        {
+			this.record.text = EstadoController.GetScore();
+		}*/
+	
 	}
 
+	
+	private async void GetUser()
+    {
+	  var httpResponse = await _httpClient.GetAsync("https://animals-c205c.firebaseio.com/users/3QhZJ7YGe9dubbSjBSoYnS7BINn1.json");
 
-
-	public void OnTrackableStateChanged(
-	TrackableBehaviour.Status previousStatus,
-	TrackableBehaviour.Status newStatus)
-	{
-		if (newStatus == TrackableBehaviour.Status.DETECTED ||
-			newStatus == TrackableBehaviour.Status.TRACKED ||
-			newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
-		{
-			OnTrackingFound();
-		}
-	}
-
-
-	private void OnTrackingFound()
-	{
-		if (myPanel != null)
-		{
+		if(httpResponse.IsSuccessStatusCode)
+        {
+			var content = await httpResponse.Content.ReadAsStringAsync();
+			User user = JsonUtility.FromJson<User>(content);
+			Debug.Log(user);
+        }
 		
-			myPanel.parent = target.transform;
-		
-		}
-	}
+
+    }
 
 
 
-	public void Play()
+
+
+
+
+
+
+
+    public void Play()
 	{
+		
 		SceneManager.LoadScene("GamePlay");
 	}
 
 	public void Menu() {
+		
 		SceneManager.LoadScene("Portada");
 	}
 

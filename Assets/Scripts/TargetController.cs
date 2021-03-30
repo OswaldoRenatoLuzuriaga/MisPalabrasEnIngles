@@ -190,8 +190,8 @@ public class TargetController : MonoBehaviour
 
 
 		//Capturo el nombre del animal que esta detectando
-		GameObject infoPanel = GameObject.FindGameObjectWithTag("Panel");
-		infoPanel.GetComponent<InfoController>().SetNombreAnimal(nombre);
+		GameObject informationPanel = GameObject.FindGameObjectWithTag("Panel");
+		informationPanel.GetComponent<InfoPanelController>().SetCharacterName(nombre);
 
 	}
 

@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 4339069229526968471}
-  audioClipTimer: {fileID: 8300000, guid: 7db3e0e68b7dbb74d9ff366fb4091676, type: 3}
-  audioClipExplosion: {fileID: 8300000, guid: 49d2f44d00527b644880e130714ad371, type: 3}
+  audioTimer: {fileID: 8300000, guid: ba37d01b67fbe034885a21831184d7c5, type: 3}
+  audioExplosion: {fileID: 8300000, guid: 6bcf007fac91b0b40afb9fb4d968230c, type: 3}
+  audioCoin: {fileID: 8300000, guid: 0d1b53f93a5821e40a032fd84d0b8ec0, type: 3}
+  audioError: {fileID: 8300000, guid: ba6c8a126024cf84e92e743383d3eedd, type: 3}
   audioPanda: {fileID: 8300000, guid: bec329eedb0a2974c9bafd8c62ce0ccc, type: 3}
   audioFox: {fileID: 8300000, guid: 90e191bf1b0210d4f9ca4c7a654c992b, type: 3}
 --- !u!82 &4339069229526968470

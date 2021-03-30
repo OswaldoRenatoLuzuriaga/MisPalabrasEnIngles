@@ -17,10 +17,11 @@ public class BombController: MonoBehaviour
     private bool useHelp;
 
 
-    //Componentes de la bomba
+    //Componentes de la granada
     private Animator anim;
     private Rigidbody2D rb2d;
     private Image bombImage;
+ 
 	#endregion
 
 	#region PUBLIC_VARIABLES
@@ -61,7 +62,7 @@ public class BombController: MonoBehaviour
         if (useHelp)
         {
 			//StartCoroutine(ActivarBomba());
-            ActivarImagen(this.bombImage);
+            ActivateBomb(this.bombImage);
 			rb2d.constraints = RigidbodyConstraints2D.None;
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(Vector2.down * downForce);
@@ -76,7 +77,7 @@ public class BombController: MonoBehaviour
     {
         StartCoroutine(DesactivarBomba());
         anim.SetTrigger("Explosion");
-        SoundSystem.soundEffect.Explosion();
+        EfectosDeSonido._efectosDeSonido.Explosion();
         StartCoroutine(FadeButton());
         
        
@@ -105,7 +106,7 @@ public class BombController: MonoBehaviour
     }
 
 
-    private void ActivarImagen (Image image){
+    private void ActivateBomb(Image image){
      
         Color c = image.color;
         c.a += 1;
@@ -122,6 +123,7 @@ public class BombController: MonoBehaviour
           yield return new WaitForSeconds(0.4f);
 
           GameObject gestor = GameObject.FindGameObjectWithTag("GestorPreguntas");
+         
           string nombreCorrecto= gestor.GetComponent<OptionController>().GetAnimalName();
 
 

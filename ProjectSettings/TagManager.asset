@@ -11,6 +11,7 @@ TagManager:
   - PanelOpciones
   - GestorPreguntas
   - ImageTarget
+  - CloudRecognition
   layers:
   - Default
   - TransparentFX

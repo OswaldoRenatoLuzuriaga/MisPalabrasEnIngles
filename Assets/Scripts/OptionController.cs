@@ -5,63 +5,75 @@ using UnityEngine.UI;
 using System.Threading;
 using System.IO;
 using TMPro;
+using Proyecto26;
 public class OptionController: MonoBehaviour
 {
-	
+    #region PUBLIC_VARIABLES
+    [Header("Valores de usuario")]
 	public TextMeshProUGUI score;
+	public TextMeshProUGUI playerName;
 
-	public  Button button1;
-	public  Button button2;
+
+	[Header("Botones de opciones")]
+	public Button button1;
+	public Button button2;
 	public Button button3;
 
+
+	[Header("Nombres")]
 	public Text nombre1;
 	public Text nombre2;
 	public Text nombre3;
 
-    public Image fail1;
+
+	[Header("Errores")]
+	public Image fail1;
     public Image fail2;
     public Image fail3;
 
     public Image panel;
-	private List<string> animales;
+    #endregion
+
+
+    #region PRIVATE_VARIABLES
+    private List<string> animales;
     private int  puntos;
 	private string nombreCorrecto = "";
-
+	private Dictionary<string, bool> escaneados;
+	private const string URL = "https://animals-c205c.firebaseio.com";
+	#endregion
 
 	#region UNITY_MONOBEHAVIOUR_METHODS
 
-
+	private User player;
 
 	void Start()
     {
 		puntos = 0;
 		animales = new List<string>();
-	
+		score.text = "Score: " + puntos;
+		///playerName.text = EstadoController.GetNamePlayer();
+		playerName.text = PlayerPrefs.GetString("NombreJugador");
+		escaneados = new Dictionary<string, bool>();
+		
 	}
 
 	#endregion
 
-    public string getScore(){
-		return "Score: " + puntos;
-	}
 
 
-	public string GetAnimalName(){
-		return this.nombreCorrecto;
-	}
-
-
+	#region PRIVATE_METHOD
 	private void UpdateScore() {
 	  
 		puntos++;
 		score.text = "Score: "+ puntos;
-    }
+		EstadoController.SetScore("Score: " + puntos);
+		
+		
+	}
 
 
 	
-
-
-
 	private IEnumerator AddName(string nombreAnimal) {
 
 
@@ -75,7 +87,7 @@ public class OptionController: MonoBehaviour
 
 		if (animales.Contains(nombreAnimal)) animales.Remove(nombreAnimal);
 
-		//Buscamos 3 posiciones aleatorias al tener ya en nombre del target
+		//Buscamos 3 posiciones aleatorias al tener ya el nombre del target
 		int x = Random.Range(0, 9);
 		int y = Random.Range(0, 9);
 		int z = Random.Range(0, 9);
@@ -113,18 +125,28 @@ public class OptionController: MonoBehaviour
 	}
 
 
-	private void InicializarNombres() {
+	private void Initializename() {
 
-		    animales.Add("Panda");
-			animales.Add("Fox");
-			animales.Add("Sheep");
-			animales.Add("Elephant");
-			animales.Add("Chicken");
-			animales.Add("Monkey");
+		    animales.Add("panda");
+			animales.Add("fox");
+			animales.Add("sheep");
+			animales.Add("elephant");
+			animales.Add("chicken");
+			animales.Add("monkey");
 			animales.Add("Tiger");
-			animales.Add("Duckling");
-			animales.Add("Lizard");
-			animales.Add("Penguin");
+			animales.Add("duck");
+			animales.Add("lizard");
+			animales.Add("penguin");
+			animales.Add("reindeer");
+			animales.Add("chimpanzee");
+			animales.Add("hermit crab");
+			animales.Add("bat");
+			animales.Add("hyena");
+			animales.Add("pig");
+			animales.Add("lemur");
+			animales.Add("hawk");
+			animales.Add("sloth");
+			animales.Add("hippopotamus");
 
 
 		//yield return new WaitForSeconds(0.1f);
@@ -134,10 +156,8 @@ public class OptionController: MonoBehaviour
 
 
 
-
-
     private IEnumerator  OffButtom(Button button, Image image, Text text){
-		//Desactivamos el button que
+		
 		yield return new WaitForSeconds(0.1f);
 	
 	     
@@ -146,8 +166,6 @@ public class OptionController: MonoBehaviour
 		button.GetComponent<Image>().color = colorButton;
 		button.enabled = false;
 		
-
-         //panel.gameObject.SetActive(false);
 		 image.gameObject.SetActive(true);
        
 
@@ -180,24 +198,19 @@ public class OptionController: MonoBehaviour
 
 	private IEnumerator  nextCard(){
 		yield return new WaitForSeconds(0.5f);
-	    panel.gameObject.SetActive(true);
+		GameObject reco = GameObject.FindGameObjectWithTag("CloudRecognition");
+		reco.GetComponent<SimpleCloudRecoEventHandler>().RestartScannig();
+		panel.gameObject.SetActive(true);
 		
 		
 	    
 	}
 
-	private void DesactivarPanel(){
+	private void esactivarPanel(){
 //        nextCard.gameObject.SetActive(false);
 	     panel.gameObject.SetActive(false);
 		
 	}
-
-
-
-   private void ErrorCard(){
-
-   }
-
 
 
     private bool IsSuccess(Button button){
@@ -213,27 +226,23 @@ public class OptionController: MonoBehaviour
 		return false;
 	}
 
+
 	private void MarkWrong(Button button){
 
 		if(button.Equals(button1)){
 			 button1.enabled = false;
-			 /*OffButtom(this.button3, this.fail3,this.nombre3);
-		     OffButtom(this.button2, this.fail2,this.nombre2);*/
+		
 			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
 			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
         
 		}else if(button.Equals(button2)){
 			  button2.enabled = false;
-             /*OffButtom(this.button3, this.fail3,this.nombre3);
-			 OffButtom(this.button1, this.fail1,this.nombre1);*/
+          
 			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
 			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
 			
 		}else if(button.Equals(button3)){
 			 button3.enabled = false;
-             /*OffButtom(this.button2, this.fail2,this.nombre2);
-		     OffButtom(this.button1, this.fail1,this.nombre1);*/
-
 			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
 			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
 		
@@ -243,11 +252,17 @@ public class OptionController: MonoBehaviour
 	}
 
 
-	public void OnClick (Button button){
+
+#endregion
+
+
+    #region PUBLIC_ METHOD
+    public void OnClick (Button button){
 
 		if (IsSuccess(button))
 		{
-			 SoundSystem.soundEffect.Coin();	
+			
+			 EfectosDeSonido._efectosDeSonido.Coin();	
 			 UpdateScore();
 			 MarkWrong(button);
 			 StartCoroutine( nextCard());
@@ -255,7 +270,7 @@ public class OptionController: MonoBehaviour
 			
 		}
 		else {
-			 SoundSystem.soundEffect.Error();
+			 EfectosDeSonido._efectosDeSonido.Error();
 		     
 			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
 			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
@@ -265,23 +280,48 @@ public class OptionController: MonoBehaviour
 		}
 	}
 
+	public string getScore()
+	{
+		return "Score: " + puntos;
+	}
 
+	public int GetPuntos()
+	{
+		return this.puntos;
+	}
+	public string GetAnimalName()
+	{
+		return this.nombreCorrecto;
+	}
 
 
 	//Inicializamos los butones que esten desactivados
-	#region PUBLIC_ METHOD
+
 	public void InitButtom(string nombreAnimal) {
-		InicializarNombres();
-		DesactivarPanel();
-		StartCoroutine(AddName(nombreAnimal));
-		StartCoroutine(OnButtom(this.button3, this.fail3,this.nombre3));
-		StartCoroutine(OnButtom(this.button2, this.fail2,this.nombre2));
-		StartCoroutine(OnButtom(this.button1, this.fail1,this.nombre1)); 	
+		
+		if(escaneados.ContainsKey(nombreAnimal))
+        {
+			StartCoroutine(nextCard());
+
+		}
+        else
+        {
+			escaneados.Add(nombreAnimal, true);
+		    Initializename();
+			//Desactivo el panel
+			panel.gameObject.SetActive(false);
+			StartCoroutine(AddName(nombreAnimal));
+			StartCoroutine(OnButtom(this.button3, this.fail3, this.nombre3));
+			StartCoroutine(OnButtom(this.button2, this.fail2, this.nombre2));
+			StartCoroutine(OnButtom(this.button1, this.fail1, this.nombre1));
+		}
+			
 	}
 
 
 
 
-		#endregion
 
-	}
+	#endregion
+
+}
