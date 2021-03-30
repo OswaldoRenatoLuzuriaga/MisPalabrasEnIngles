@@ -57,15 +57,15 @@ sysinfo.txt
 *.unitypackage
 
 # Personajes en 3D
-Assets/Animal pack deluxe/
+Assets/AnimalPackDeluxe/*
 # Crashlytics generated file
 crashlytics-build.properties
 
 
 #Firebase
-Assets/Firebase
+Assets/Firebase/*
 
-Assets/Animal pack deluxe
+Assets/AnimalPackDeluxe/*
 
 .fake
 .ionide
