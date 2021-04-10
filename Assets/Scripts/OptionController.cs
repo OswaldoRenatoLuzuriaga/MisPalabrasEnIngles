@@ -67,7 +67,7 @@ public class OptionController: MonoBehaviour
 	  
 		puntos++;
 		score.text = "Score: "+ puntos;
-		EstadoController.SetScore("Score: " + puntos);
+	
 		
 		
 	}

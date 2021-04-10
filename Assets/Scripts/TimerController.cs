@@ -9,18 +9,14 @@ using Proyecto26;
 public class TimerController : MonoBehaviour
 {
 	#region PUBLIC_VARIABLES
+	[Header("Timer")]
 	public TextMeshProUGUI segundero;
 	public float tiempoActual;
 	public Image healthBar;
 	public Button help1;
-	
 	public Image close;
-	
-
 	public Image panel;
-	private float peso;
 
-	public GameObject camaraGameOver;
 	#endregion
 
 
@@ -28,13 +24,18 @@ public class TimerController : MonoBehaviour
 	private float timer = 120f;
 	private bool isButtonHelp;
 	private Animator anim;
+	private float peso;
 	#endregion
 
 
 	[Header("Panel Game Over")]
 	public Canvas canvas;
+
+	[Header("Score")]
 	public TextMeshProUGUI score;
 	public TextMeshProUGUI scoreTotal;
+
+	[Header("Paused")]
 	public AudioMixerSnapshot paused;
 
 
@@ -45,7 +46,7 @@ public class TimerController : MonoBehaviour
 		canvas.enabled = false;
 		isButtonHelp = false;
 		tiempoActual = 0;
-		ActualizarTiempo();
+		ActualizarSlider();
 		anim = GetComponent<Animator>();
 		peso = 30;
 
@@ -54,22 +55,18 @@ public class TimerController : MonoBehaviour
 	
 	void Update()
 	{
-		//Actualizamos el tiempo
+		//Actualizamos el tiempo 120 segundos menos el tiempo transcurrido
 		timer -= Time.deltaTime;
 		segundero.text = " " + timer.ToString("f0");
 		//Actualizamos la barra de salud
 		tiempoActual += Time.deltaTime / 120;
-		ActualizarTiempo();
-
+		ActualizarSlider();
 		if (timer <= 0) {
 			enabled = false;
-			
 			GameOver();
-			
 		}
 		if (timer <= 11 && timer > 0)
 		{
-			
 			Vibrar();
 		}
 		StartCoroutine(DisableButton());
@@ -122,7 +119,7 @@ public class TimerController : MonoBehaviour
 
 
 
-	private void ActualizarTiempo()
+	private void ActualizarSlider()
 	{
 		healthBar.fillAmount = tiempoActual;
 
@@ -156,8 +153,8 @@ public class TimerController : MonoBehaviour
 			this.timer += peso;
 			isButtonHelp = true;
 			tiempoActual -= (peso / 120);
-			
-			ActualizarTiempo();
+
+			ActualizarSlider();
 		}
 
 

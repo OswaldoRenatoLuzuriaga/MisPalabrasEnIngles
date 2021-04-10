@@ -13,7 +13,7 @@ public class BombController: MonoBehaviour
 	
 
     //Variable de Fuerza de caida
-    private float downForce = 40000f;
+    private const float downForce = 40000f;
     private bool useHelp;
 
 
@@ -65,6 +65,7 @@ public class BombController: MonoBehaviour
             ActivateBomb(this.bombImage);
 			rb2d.constraints = RigidbodyConstraints2D.None;
             rb2d.velocity = Vector2.zero;
+            
             rb2d.AddForce(Vector2.down * downForce);
             useHelp = false;
 			
@@ -75,7 +76,7 @@ public class BombController: MonoBehaviour
 	#region PRIVATE_METHODS
 	private void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(DesactivarBomba());
+        StartCoroutine(DesactivarGranada());
         anim.SetTrigger("Explosion");
         EfectosDeSonido._efectosDeSonido.Explosion();
         StartCoroutine(FadeButton());
@@ -83,7 +84,7 @@ public class BombController: MonoBehaviour
        
     }
 
-    private IEnumerator DesactivarBomba()
+    private IEnumerator DesactivarGranada()
 	{
 
         yield return new WaitForSeconds(0.4f);

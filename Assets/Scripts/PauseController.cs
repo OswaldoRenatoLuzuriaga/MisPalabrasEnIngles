@@ -79,8 +79,6 @@ el botón*/
 
 	//Habilitamos la escena para seguir jugando.
 	public void Play() {
-	
-
 	  if(canvas.enabled){
         canvas.enabled = false;
 		Time.timeScale = 1;

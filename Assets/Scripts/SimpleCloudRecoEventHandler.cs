@@ -98,9 +98,12 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour, IObjectRecoEventHandle
         panelDeOpciones.GetComponent<OptionController>().InitButtom(cloudRecoSearchResult.TargetName);
 
         //Paso la información al panel informativo
-        GameObject informationPanel = GameObject.FindGameObjectWithTag("Panel");
+       /* GameObject informationPanel = GameObject.FindGameObjectWithTag("Panel");
         informationPanel.GetComponent<InfoPanelController>().SetCharacterName(cloudRecoSearchResult.TargetName);
-        informationPanel.GetComponent<InfoPanelController>().SetInformation(mTargetMetadata);
+        informationPanel.GetComponent<InfoPanelController>().SetInformation(mTargetMetadata);*/
+
+        PlayerPrefs.SetString("descripcionPersonaje", mTargetMetadata);
+        PlayerPrefs.SetString("nombrePersonaje", cloudRecoSearchResult.TargetName);
 
         switch (cloudRecoSearchResult.TargetName)
         {

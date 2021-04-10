@@ -24,8 +24,7 @@ public class GameOver : MonoBehaviour
 	    _httpClient = new HttpClient();
 	
 	
-		Debug.Log("El estado final es:-> " + EstadoController.GetScore());
-		this.score.text = EstadoController.GetScore();
+	
 		/*if(this.record.text != this.score.text)
         {
 			this.record.text = EstadoController.GetRecord();
