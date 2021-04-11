@@ -76,7 +76,6 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour, IObjectRecoEventHandle
         mIsScanning = scanning;
         if (scanning)
         {
-           
             var tracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
             tracker.GetTargetFinder<ImageTargetFinder>().ClearTrackables(false);
         }
@@ -95,15 +94,14 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour, IObjectRecoEventHandle
 
         //Inicializamos las opciones de los botones
         GameObject panelDeOpciones = GameObject.FindGameObjectWithTag("GestorPreguntas");
-        panelDeOpciones.GetComponent<OptionController>().InitButtom(cloudRecoSearchResult.TargetName);
+        panelDeOpciones.GetComponent<OptionController>().InitOptions(cloudRecoSearchResult.TargetName);
 
         //Paso la información al panel informativo
-       /* GameObject informationPanel = GameObject.FindGameObjectWithTag("Panel");
+        GameObject informationPanel = GameObject.FindGameObjectWithTag("GestorAyudaTres");
         informationPanel.GetComponent<InfoPanelController>().SetCharacterName(cloudRecoSearchResult.TargetName);
-        informationPanel.GetComponent<InfoPanelController>().SetInformation(mTargetMetadata);*/
+        informationPanel.GetComponent<InfoPanelController>().SetInformation(mTargetMetadata);
 
-        PlayerPrefs.SetString("descripcionPersonaje", mTargetMetadata);
-        PlayerPrefs.SetString("nombrePersonaje", cloudRecoSearchResult.TargetName);
+      
 
         switch (cloudRecoSearchResult.TargetName)
         {

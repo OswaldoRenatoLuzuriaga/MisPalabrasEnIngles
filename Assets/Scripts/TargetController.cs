@@ -186,7 +186,7 @@ public class TargetController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0.2f);
 		GameObject panelDeOpciones= GameObject.FindGameObjectWithTag("GestorPreguntas");
-		panelDeOpciones.GetComponent<OptionController>().InitButtom(nombre);
+		//panelDeOpciones.GetComponent<OptionController>().InitButtom(nombre);
 
 
 		//Capturo el nombre del animal que esta detectando

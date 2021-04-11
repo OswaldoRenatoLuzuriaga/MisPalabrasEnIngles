@@ -12,6 +12,7 @@ TagManager:
   - GestorPreguntas
   - ImageTarget
   - CloudRecognition
+  - GestorAyudaTres
   layers:
   - Default
   - TransparentFX

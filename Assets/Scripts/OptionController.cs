@@ -40,19 +40,19 @@ public class OptionController: MonoBehaviour
     private int  puntos;
 	private string nombreCorrecto = "";
 	private Dictionary<string, bool> escaneados;
-	private const string URL = "https://animals-c205c.firebaseio.com";
+	
 	#endregion
 
 	#region UNITY_MONOBEHAVIOUR_METHODS
 
-	private User player;
+
 
 	void Start()
     {
 		puntos = 0;
 		animales = new List<string>();
 		score.text = "Score: " + puntos;
-		///playerName.text = EstadoController.GetNamePlayer();
+
 		playerName.text = PlayerPrefs.GetString("NombreJugador");
 		escaneados = new Dictionary<string, bool>();
 		
@@ -73,26 +73,25 @@ public class OptionController: MonoBehaviour
 	}
 
 
-	
-	private IEnumerator AddName(string nombreAnimal) {
-
-
-
-
+	/**
+	 * Recibe el nombre del personaje  y 
+	 * lo añade forma aleatoria a cada boton 
+	 * para evitar posicionar la opción correcta siempre
+	 * el la misma posición
+	 */
+	private IEnumerator AddOptionName(string nombreAnimal) {
 		yield return new WaitForSeconds(0.2f);
-
-		//Inicializo una lista de animales auxiliar para trabajar con ella
 		nombreCorrecto = nombreAnimal;
-	
-
+		//Borramos el nombre del personaje de la lista de personajes para evitar
+		//inyectarlo en los botones
 		if (animales.Contains(nombreAnimal)) animales.Remove(nombreAnimal);
 
 		//Buscamos 3 posiciones aleatorias al tener ya el nombre del target
-		int x = Random.Range(0, 9);
-		int y = Random.Range(0, 9);
-		int z = Random.Range(0, 9);
+		int x = Random.Range(0, animales.Count);
+		int y = Random.Range(0, animales.Count);
+		int z = Random.Range(0, animales.Count);
 
-
+		//Generamos un número aleatoria para evitar generar siempre la misma opción
 		int pos = Random.Range(1, 4);
 
 		switch (pos)
@@ -109,23 +108,18 @@ public class OptionController: MonoBehaviour
 				nombre2.text = "" + nombreAnimal;
 				nombre3.text = "" + animales[noRepetidaZ];
 				break;
-
 			case 3:
 				int noRepetidaX = (x == y) ? Random.Range(0, x) : x;
 				nombre1.text = "" + animales[noRepetidaX];
 				nombre2.text = "" + animales[y];
 				nombre3.text = "" + nombreAnimal;
 				break;
-
-
 		}
 		animales.Clear();
-
-	
 	}
 
 
-	private void Initializename() {
+	private void InitialiOptions() {
 
 		    animales.Add("panda");
 			animales.Add("fox");
@@ -139,7 +133,7 @@ public class OptionController: MonoBehaviour
 			animales.Add("penguin");
 			animales.Add("reindeer");
 			animales.Add("chimpanzee");
-			animales.Add("hermit crab");
+			animales.Add("shark");
 			animales.Add("bat");
 			animales.Add("hyena");
 			animales.Add("pig");
@@ -147,16 +141,21 @@ public class OptionController: MonoBehaviour
 			animales.Add("hawk");
 			animales.Add("sloth");
 			animales.Add("hippopotamus");
-
-
-		//yield return new WaitForSeconds(0.1f);
-
-
+			animales.Add("ibex");
+			animales.Add("cow");
+			animales.Add("frog");
+			animales.Add("wolf");
+			animales.Add("bear");
+		    animales.Add("rabbit");
 	}
 
 
-
-    private IEnumerator  OffButtom(Button button, Image image, Text text){
+	/*
+	 * Desactivamos un boton regulando su nivel de transparencia
+	 * activamos ademas la señal informativa de error y borramos 
+	 * las opciones incorrectas
+	 */
+    private IEnumerator  OffButton(Button button, Image image, Text text){
 		
 		yield return new WaitForSeconds(0.1f);
 	
@@ -174,7 +173,10 @@ public class OptionController: MonoBehaviour
 
 	}
 
-
+	/*
+	 * Activamos los botones deshabilitados
+	 *  regulando el valor de su transparencia
+	 */
 
     private IEnumerator OnButtom(Button button, Image image, Text text){
 		
@@ -196,7 +198,10 @@ public class OptionController: MonoBehaviour
 	}
 
 
-	private IEnumerator  nextCard(){
+	/**
+	 * Lanzamos el cartel y reiniciamos el reconocimiento en la nube
+	 */
+	private IEnumerator  NextCard(){
 		yield return new WaitForSeconds(0.5f);
 		GameObject reco = GameObject.FindGameObjectWithTag("CloudRecognition");
 		reco.GetComponent<SimpleCloudRecoEventHandler>().RestartScannig();
@@ -206,14 +211,13 @@ public class OptionController: MonoBehaviour
 	    
 	}
 
-	private void esactivarPanel(){
-//        nextCard.gameObject.SetActive(false);
-	     panel.gameObject.SetActive(false);
-		
-	}
+	
+	/*
+	 * Indica si alguna de las tres opciones son 
+	 * validas
+	 */
 
-
-    private bool IsSuccess(Button button){
+    private bool IsValid(Button button){
 
 
 		if(button.Equals(button1)){
@@ -226,25 +230,31 @@ public class OptionController: MonoBehaviour
 		return false;
 	}
 
+	/*
+	 * Marca y deshabilita los botones incorrectos y 
+	 * deshabilita el boton correcto para evitar sumar puntos
+	 */
 
 	private void MarkWrong(Button button){
 
 		if(button.Equals(button1)){
+			//Se desactiva el botón de la opción correcta para evitar seguir sumando puntos
 			 button1.enabled = false;
 		
-			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
-			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
+			//Se llama a la coroutine para deshabilitar los botones incorrecto y activar la señal de opción incorrecta
+			 StartCoroutine(OffButton(this.button3, this.fail3,this.nombre3));
+			 StartCoroutine(OffButton(this.button2, this.fail2,this.nombre2));
         
 		}else if(button.Equals(button2)){
 			  button2.enabled = false;
           
-			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
-			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
+			 StartCoroutine(OffButton(this.button1, this.fail1,this.nombre1));
+			 StartCoroutine(OffButton(this.button3, this.fail3,this.nombre3));
 			
 		}else if(button.Equals(button3)){
 			 button3.enabled = false;
-			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
-			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
+			 StartCoroutine(OffButton(this.button1, this.fail1,this.nombre1));
+			 StartCoroutine(OffButton(this.button2, this.fail2,this.nombre2));
 		
 	    }
 		
@@ -259,23 +269,21 @@ public class OptionController: MonoBehaviour
     #region PUBLIC_ METHOD
     public void OnClick (Button button){
 
-		if (IsSuccess(button))
+		if (IsValid(button))
 		{
 			
 			 EfectosDeSonido._efectosDeSonido.Coin();	
 			 UpdateScore();
 			 MarkWrong(button);
-			 StartCoroutine( nextCard());
-		
-			
+			 StartCoroutine( NextCard());
 		}
 		else {
 			 EfectosDeSonido._efectosDeSonido.Error();
 		     
-			 StartCoroutine(OffButtom(this.button1, this.fail1,this.nombre1));
-			 StartCoroutine(OffButtom(this.button2, this.fail2,this.nombre2));
-			 StartCoroutine(OffButtom(this.button3, this.fail3,this.nombre3));
-			 StartCoroutine(nextCard());
+			 StartCoroutine(OffButton(this.button1, this.fail1,this.nombre1));
+			 StartCoroutine(OffButton(this.button2, this.fail2,this.nombre2));
+			 StartCoroutine(OffButton(this.button3, this.fail3,this.nombre3));
+			 StartCoroutine(NextCard());
 			 
 		}
 	}
@@ -295,22 +303,28 @@ public class OptionController: MonoBehaviour
 	}
 
 
-	//Inicializamos los butones que esten desactivados
-
-	public void InitButtom(string nombreAnimal) {
+	/**
+	 * Inicializamos los tres botones. Si se escanea la misma carta se
+	 * activa un panel para pasar a una siguiente carta.
+	 */
+	public void InitOptions(string nombreAnimal) {
 		
 		if(escaneados.ContainsKey(nombreAnimal))
         {
-			StartCoroutine(nextCard());
+			StartCoroutine(NextCard());
 
 		}
         else
         {
 			escaneados.Add(nombreAnimal, true);
-		    Initializename();
+			InitialiOptions();
+
 			//Desactivo el panel
 			panel.gameObject.SetActive(false);
-			StartCoroutine(AddName(nombreAnimal));
+
+			//Inicializamos los botones con el nombre de todas las opciones
+			StartCoroutine(AddOptionName(nombreAnimal));
+
 			StartCoroutine(OnButtom(this.button3, this.fail3, this.nombre3));
 			StartCoroutine(OnButtom(this.button2, this.fail2, this.nombre2));
 			StartCoroutine(OnButtom(this.button1, this.fail1, this.nombre1));

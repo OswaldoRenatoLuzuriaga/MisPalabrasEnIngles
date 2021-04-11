@@ -2423,7 +2423,7 @@ GameObject:
   - component: {fileID: 479363066}
   m_Layer: 5
   m_Name: GestorAyudaTres
-  m_TagString: Untagged
+  m_TagString: GestorAyudaTres
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6111,32 +6111,37 @@ PrefabInstance:
     - target: {fileID: 309736357824659144, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 309736357824659144, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 309736357824659144, guid: dfc0b34929180c24cbd24841f9972714,
+        type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 309736357824659145, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 158.52054
+      value: 169.27469
       objectReference: {fileID: 0}
     - target: {fileID: 309736357824659145, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 137.94196
+      value: 145.10657
       objectReference: {fileID: 0}
     - target: {fileID: 309736357824659145, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.09
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 309736357824659145, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.35
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 309736357824659146, guid: dfc0b34929180c24cbd24841f9972714,
         type: 3}
@@ -7131,7 +7136,7 @@ PrefabInstance:
     - target: {fileID: 9213582495102977502, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213582495102977503, guid: 214d230de9f7e664d8dfd7563a8bd371,
         type: 3}
