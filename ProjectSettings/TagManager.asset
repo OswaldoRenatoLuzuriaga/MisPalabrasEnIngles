@@ -13,6 +13,7 @@ TagManager:
   - ImageTarget
   - CloudRecognition
   - GestorAyudaTres
+  - Auth
   layers:
   - Default
   - TransparentFX

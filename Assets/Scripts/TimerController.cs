@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
-using Proyecto26;
+using System;
+using UnityEngine.Networking;
+using System.Text;
+
 public class TimerController : MonoBehaviour
 {
 	#region PUBLIC_VARIABLES
@@ -21,7 +24,7 @@ public class TimerController : MonoBehaviour
 
 
 	#region PRIVATE_VARIABLES
-	private float timer = 120f;
+	public float timer = 120f;
 	private bool isButtonHelp;
 	private Animator anim;
 	private float peso;
@@ -39,6 +42,7 @@ public class TimerController : MonoBehaviour
 	public AudioMixerSnapshot paused;
 
 
+	private const string URL = "https://animals-c205c.firebaseio.com/";
 	#region UNITY_MONOBEHAVIOUR_METHODS
 	// Start is called before the first frame update
 	void Start()
@@ -81,22 +85,7 @@ public class TimerController : MonoBehaviour
 	}
 
 
-	private IEnumerator GetUserDatabase(string id)
-	{
 
-		yield return new WaitForSeconds(20f);
-		Debug.Log("https://animals-c205c.firebaseio.com/users/" + id + ".json");
-		RestClient.Get("https://animals-c205c.firebaseio.com/users/" + id + ".json").Then((response) =>
-		{
-
-			
-			Debug.Log("El jugador de firebase es ---------> " + response.StatusCode+ response);
-			
-
-
-		}).Catch(err => { Debug.Log("Error al descargar el usuario"); });
-
-	}
 
 	private IEnumerator LanzarGameOver() {
 	
@@ -104,13 +93,86 @@ public class TimerController : MonoBehaviour
 		yield return new WaitForSeconds(3f);
 		enabled = true;
 		GameObject panelDeOpciones = GameObject.FindGameObjectWithTag("GestorPreguntas");
-		score.text = panelDeOpciones.GetComponent<OptionController>().getScore();
+		score.text = "Aciertos: " + panelDeOpciones.GetComponent<OptionController>().getScore();
+	
+
+		int record;
+	    Int32.TryParse(PlayerPrefs.GetString("RecordTotal"), out record);
+
+		int puntosActuales = panelDeOpciones.GetComponent<OptionController>().getScore();
+
+	
+		Debug.Log("-----Los Puntos actuales son " + score.text.ToString() + "El record es " + record);
+		
+
+		//Si los puntos actuales son mayores lo actualizamos
+		if(puntosActuales > record)
+        {
+			scoreTotal.text = "Récord de aciertos: " +  puntosActuales;
+			PlayerPrefs.SetString("RecordTotal", Convert.ToString(puntosActuales));
+			StartCoroutine(PutUser());
+		
+		}
+        else
+        {
+			scoreTotal.text = "Récord de aciertos: " + record;
+			
+		}
+		
 		
 		canvas.enabled = true;
-		
-		//SceneManager.LoadScene("GameOver");
+
+}
+
+
+	public void Play()
+    {
+
+		SceneManager.LoadScene("GamePlay");
 	}
-	private void GameOver() {
+
+	public void Home()
+    {
+		SceneManager.LoadScene("Portada");
+	}
+
+
+
+
+	IEnumerator PutUser()
+	{
+
+		User player = new User();
+		player._score = PlayerPrefs.GetString("ScoreJugador");
+		player._name = PlayerPrefs.GetString("NombreJugador");
+		player._record = PlayerPrefs.GetString("RecordTotal");
+		player._id = PlayerPrefs.GetString("Id_Player");
+		player._email = PlayerPrefs.GetString("email");
+
+
+
+		byte[] myData = Encoding.UTF8.GetBytes(JsonUtility.ToJson(player));
+
+		using (UnityWebRequest www = UnityWebRequest.Put(URL + "/users/" + PlayerPrefs.GetString("Id_Player") + ".json", myData))
+		{
+			yield return www.SendWebRequest();
+
+			
+
+			if (www.isNetworkError)
+			{
+				Debug.Log("Error al enviar el usuario " + www.error);
+			}
+			else
+			{
+				Debug.Log("Upload complete!");
+			}
+		}
+	}
+
+
+
+	public void GameOver() {
 		StartCoroutine(LanzarGameOver());
 		
 		segundero.text = "" + 0;

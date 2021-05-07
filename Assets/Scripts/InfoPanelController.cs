@@ -21,6 +21,8 @@ public class InfoPanelController : MonoBehaviour
 	void Start()
 	{
 		panelInfo.SetActive(false);
+		this.nameCharacter = "";
+		this.informationCharacter = "";
 	}
 
 

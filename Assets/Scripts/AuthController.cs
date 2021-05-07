@@ -4,12 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Firebase;
 using Firebase.Auth;
-using Firebase.Database;
-
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Proyecto26;
 using UnityEngine.Networking;
 using System.Text;
 
@@ -41,7 +38,7 @@ public class AuthController : MonoBehaviour
 
     [Header("Error Panel")]
  
-    private User player;
+    public User player;
     private const string URL = "https://animals-c205c.firebaseio.com/";
 
     // Start is called before the first frame update
@@ -49,8 +46,11 @@ public class AuthController : MonoBehaviour
     {
         panelLogin.SetActive(false);
         panelRegister.SetActive(false);
-       
+        
         this.player = new User();
+
+
+
     }
 
     void Awake()
@@ -81,10 +81,22 @@ public class AuthController : MonoBehaviour
 
     }
 
+    
+    public string IsLogin()
+    {
+        return (this.player._name != null) ? this.player._name: "esta vacio";
+    }
+
     public void LoginButton()
     {
         StartCoroutine(Login(emailLogin.text, passLogin.text));
 
+    }
+
+
+    public void LoginButtonFake(string email, string password)
+    {
+        StartCoroutine(Login(email, password));
     }
 
     private IEnumerator Login(string email, string password)
@@ -157,9 +169,9 @@ public class AuthController : MonoBehaviour
                 byte[] results = www.downloadHandler.data;
                 //Lo convertimos a un string
                 string playerJson = Encoding.Default.GetString(results);
-                //Deserealizampos el json descargado
-          
                 
+                
+                //Deserealizamos el json descargado
                 User player = JsonUtility.FromJson<User>(playerJson);
 
                
@@ -174,16 +186,18 @@ public class AuthController : MonoBehaviour
     private void SaveStateGame(User player)
     {
 
+        
         PlayerPrefs.SetString("ScoreJugador", player._score);
         PlayerPrefs.SetString("NombreJugador", player._name);
         PlayerPrefs.SetString("RecordTotal", player._record);
         PlayerPrefs.SetString("Id_Player", player._id);
+        PlayerPrefs.SetString("email", player._email);
         Jugar();
        
     }
 
   
-    private IEnumerator Register(string email, string password, string userName)
+    public IEnumerator Register(string email, string password, string userName)
     {
 
 

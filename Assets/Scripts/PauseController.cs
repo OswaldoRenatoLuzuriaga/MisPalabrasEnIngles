@@ -12,7 +12,7 @@ using UnityEditor;
 public class PauseController : MonoBehaviour
 {
 
-	Canvas canvas;
+    Canvas canvas;
   
 
 	[Header("Slider")]

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.Threading;
 using System.IO;
 using TMPro;
-using Proyecto26;
+
 public class OptionController: MonoBehaviour
 {
     #region PUBLIC_VARIABLES
@@ -51,7 +51,7 @@ public class OptionController: MonoBehaviour
     {
 		puntos = 0;
 		animales = new List<string>();
-		score.text = "Score: " + puntos;
+		score.text = "Aciertos: " + puntos;
 
 		playerName.text = PlayerPrefs.GetString("NombreJugador");
 		escaneados = new Dictionary<string, bool>();
@@ -66,7 +66,7 @@ public class OptionController: MonoBehaviour
 	private void UpdateScore() {
 	  
 		puntos++;
-		score.text = "Score: "+ puntos;
+		score.text = "Aciertos: "+ puntos;
 	
 		
 		
@@ -75,7 +75,7 @@ public class OptionController: MonoBehaviour
 
 	/**
 	 * Recibe el nombre del personaje  y 
-	 * lo añade forma aleatoria a cada boton 
+	 * lo añade de forma aleatoria a cada boton 
 	 * para evitar posicionar la opción correcta siempre
 	 * el la misma posición
 	 */
@@ -126,13 +126,14 @@ public class OptionController: MonoBehaviour
 			animales.Add("sheep");
 			animales.Add("elephant");
 			animales.Add("chicken");
+
 			animales.Add("monkey");
 			animales.Add("Tiger");
 			animales.Add("duck");
 			animales.Add("lizard");
 			animales.Add("penguin");
 			animales.Add("reindeer");
-			animales.Add("chimpanzee");
+			animales.Add("dog");
 			animales.Add("shark");
 			animales.Add("bat");
 			animales.Add("hyena");
@@ -140,7 +141,7 @@ public class OptionController: MonoBehaviour
 			animales.Add("lemur");
 			animales.Add("hawk");
 			animales.Add("sloth");
-			animales.Add("hippopotamus");
+			animales.Add("cat");
 			animales.Add("ibex");
 			animales.Add("cow");
 			animales.Add("frog");
@@ -288,9 +289,9 @@ public class OptionController: MonoBehaviour
 		}
 	}
 
-	public string getScore()
+	public int getScore()
 	{
-		return "Score: " + puntos;
+		return  puntos;
 	}
 
 	public int GetPuntos()

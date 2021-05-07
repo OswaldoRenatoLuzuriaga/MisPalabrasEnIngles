@@ -130,8 +130,8 @@ public class BombController: MonoBehaviour
 
           if (nombreCorrecto != null)
           {
-			
-              if (nombreCorrecto.Equals(optionText1.text))
+            //Desactivo el boton 2
+            if (nombreCorrecto.Equals(optionText1.text))
               {
                 
                   //  button2.gameObject.SetActive(false);
@@ -141,7 +141,8 @@ public class BombController: MonoBehaviour
                     optionText2.enabled = false;
 		
               }
-              else if (nombreCorrecto.Equals(optionText2.text))
+            //Desactivo el boton 3
+            else if (nombreCorrecto.Equals(optionText2.text))
               {
                
                    //button3.gameObject.SetActive(false);
@@ -150,6 +151,7 @@ public class BombController: MonoBehaviour
                     DesactivarButton(this.button3);
                     optionText3.enabled = false;
               }
+              //Desactivo el boton 1
               else if (nombreCorrecto.Equals(optionText3.text))
               {
                   
