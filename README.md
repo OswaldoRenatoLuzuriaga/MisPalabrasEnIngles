@@ -28,7 +28,7 @@ Para iniciar la aplicación necesitas introducir en los campos habilitados para 
 
 ![Imagen de login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin.png?alt=media&token=b24820a0-0277-4b28-82f6-b5aaf69b8972 "Login, Mis Palabras en Inglés").
 
-### Configuración de niveles de sonido
+### Regular el nivel de volumen de la música de fondo y efectos de sonido.
 Una vez te hayas logado en la aplicación, tendrás acceso, a la portada principal la misma, aquí encontradas el botón de ajustes de sonido, aquí podrás ajustar los niveles de volumen de los efectos de sonido y la música de fondo.
 
 
