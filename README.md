@@ -68,7 +68,7 @@ Una vez acabado los 2 minutos que tenías disponible, la aplicación, te mostrar
 podrás repetir partida o salir del juego, pulsando, en los botones habilitados para tal fin.
 
 
-![Imagen de Game Over](https://console.firebase.google.com/project/animals-c205c/storage/animals-c205c.appspot.com/files~2Fimages?hl=es "Game Over, Mis Palabras en Inglés").
+![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FGame_over.png?alt=media&token=06286c82-7b3b-416a-8329-70e57f605a2f "Game Over, Mis Palabras en Inglés").
 
 ### Restricciones del juego
 1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
