@@ -56,12 +56,11 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# Personajes en 3D
-Assets/AnimalPackDeluxe/
+
 # Crashlytics generated file
 crashlytics-build.properties
 
-Assets/*
+
 Library/*
 Logs/*
 obj/*
@@ -72,11 +71,24 @@ Target/*
 
 
 #Firebase
-Assets/Firebase/
+Assets/Firebase/*
 
 #Personajes
 Assets/AnimalPackDeluxe/*
-Personajes/
+Assets/Personajes/*
+
+Assets/RestClient/*
+Assets/Parse/*
+Assets/Editor Default Resources/*
+Assets/Editor/*
+Assets/ExternalDependencyManager/*
+Assets/Resources/*
+Assets/StreamingAssets/*
+Assets/Animaciones/*
+Assets/ic_launcher/*
+Assets/Prefabs/*
+Assets/Plugins/*
+
 
 .fake
 .ionide

@@ -7,11 +7,22 @@ public class PortadaController : MonoBehaviour
 {
 
 	public string escena;
+	public string url;
 
 	public void Jugar()
 	{
 	
 		SceneManager.LoadScene(escena);
+		
 	}
+
+
+
+	public void IrGuiaDeUsuario()
+
+	{
+		Application.OpenURL(url);
+	}
+
 
 }

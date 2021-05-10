@@ -41,6 +41,9 @@ public class AuthController : MonoBehaviour
     public User player;
     private const string URL = "https://animals-c205c.firebaseio.com/";
 
+    [Header("URL ayuda")]
+    public string url;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -310,5 +313,14 @@ public class AuthController : MonoBehaviour
     }
 
 
+
+
+  
+
+    public void IrGuiaDeUsuario()
+
+    {
+        Application.OpenURL(url);
+    }
 
 }
