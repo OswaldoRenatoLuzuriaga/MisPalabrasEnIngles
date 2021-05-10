@@ -22,7 +22,7 @@ Una vez instalada la aplicación es necesario que dispongas de una cuenta de usu
 ![Imagen de registro](https://github.com/OswaldoRenatoLuzuriaga/MisPalabrasEnIngles/blob/master/Assets/image/registro.png "Registro, Mis Palabras en Inglés").
 
 
-z
+
 ### Login
 Para iniciar la aplicación necesitas introducir en los campos habilitados para tal fin tu email y contraseña que indicaste en el campo registro.
 
