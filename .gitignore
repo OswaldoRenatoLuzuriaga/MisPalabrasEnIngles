@@ -44,6 +44,8 @@ ExportedObj/
 *.VC.db
 *.unity.meta
 *.meta
+*.ionide
+
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -90,6 +92,9 @@ Assets/Animaciones/*
 Assets/ic_launcher/*
 Assets/Prefabs/*
 Assets/Plugins/*
+Assets/Sonido/*
+Assets/TextMesh Pro/*
+Assets/Materiales/*
 
 
 .fake
