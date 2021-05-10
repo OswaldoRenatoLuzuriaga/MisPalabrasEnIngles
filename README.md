@@ -19,7 +19,7 @@ Para la instalación de la aplicación es necesario habilitar los permisos de se
 ### Registo
 Una vez instalada la aplicación es necesario que dispongas de una cuenta de usuario solo se te pedirá el correo electrónico y una contraseña, te recomiendo que sea una contraseña de mínimo 8 dígitos entre números, letras y caracteres especiales.
 
-![Imagen de registro](https://github.com/OswaldoRenatoLuzuriaga/MisPalabrasEnIngles/blob/master/Assets/image/registro.png "Registro, Mis Palabras en Inglés").
+![Imagen de registro](https://github.com/OswaldoRenatoLuzuriaga/MisPalabrasEnIngles/blob/master/Assets/image/registro.jpg "Registro, Mis Palabras en Inglés").
 
 
 
