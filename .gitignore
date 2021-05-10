@@ -45,6 +45,7 @@ ExportedObj/
 *.unity.meta
 *.meta
 *.ionide
+*.unity
 
 
 # Unity3D generated meta files
@@ -95,7 +96,11 @@ Assets/Plugins/*
 Assets/Sonido/*
 Assets/TextMesh Pro/*
 Assets/Materiales/*
-
+Assets/Fuentes/*
+Assets/Scenes/*
+Assets/Sprites/*
+.vscode/*
+.vsconfig/*
 
 .fake
 .ionide
