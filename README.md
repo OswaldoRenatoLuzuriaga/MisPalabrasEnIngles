@@ -149,7 +149,7 @@ Las restricciones son las siguientes:
 
 
 ### 8. Comparativa de contraste local
-En la imagen se puede ver la comparativa de una imagen, el antes y despues de mejorar el nivel de contraste.
+En la imagen se puede ver la comparativa de una imagen, el antes y despues de mejorar su nivel de contraste.
 
 
 ![Comparativa de contraste , fuente Vuforia](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fejemplo_de_imagen.png?alt=media&token=f31c11b3-f3d6-4b7e-9811-410be36347b8  "Comparativa de contraste")
