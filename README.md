@@ -85,7 +85,7 @@ Podrás repetir partida o salir del juego, pulsando, en los botones habilitados 
                                            
 
 
-# Panel de administración
+# Panel web para el administrador del juego
 Se crea un panel para el profesor o responsable de la asignatura, en este panel se podra realizar funciones como borrar, editar y añadir una carta nueva.
 
 ### 1. Registo
