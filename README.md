@@ -19,23 +19,26 @@ Para la instalación de la aplicación es necesario habilitar los permisos de se
 ### Registo
 Una vez instalada la aplicación es necesario que dispongas de una cuenta de usuario solo se te pedirá el correo electrónico y una contraseña, te recomiendo que sea una contraseña de mínimo 8 dígitos entre números, letras y caracteres especiales.
 
-![Imagen de registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fregistro.jpg?alt=media&token=d06b67ab-bd90-473b-b4c3-bdea659a6d63 "Registro, Mis Palabras en Inglés").
+![Imagen de registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fregistro.jpg?alt=media&token=d06b67ab-bd90-473b-b4c3-bdea659a6d63 "Registro, Mis Palabras en Inglés")
+
 
 
 
 ### Login
 Para iniciar la aplicación necesitas introducir en los campos habilitados para tal fin tu email y contraseña que indicaste en el campo registro.
 
-![Imagen de login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin.png?alt=media&token=b24820a0-0277-4b28-82f6-b5aaf69b8972 "Login, Mis Palabras en Inglés").
+![Imagen de login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin.png?alt=media&token=b24820a0-0277-4b28-82f6-b5aaf69b8972 "Login, Mis Palabras en Inglés")
 
 ### Regular el nivel de volumen de la música de fondo y efectos de sonido.
 Una vez te hayas logado en la aplicación, tendrás acceso, a la portada principal la misma, aquí encontradas el botón de ajustes de sonido, aquí podrás ajustar los niveles de volumen de los efectos de sonido y la música de fondo.
 
 
-![Imagen de conf](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fniveles_de_sonido.png?alt=media&token=90ddbd19-6d34-47c4-930a-ffb14b86873e "Conf nivel de sonido, Mis Palabras en Inglés").
+![Imagen de conf](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fniveles_de_sonido.png?alt=media&token=90ddbd19-6d34-47c4-930a-ffb14b86873e "Conf nivel de sonido, Mis Palabras en Inglés")
 
-### Temática del juego e instrucciones de juego.
-Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cartas o Flash cards que contienen el hábitat de los personajes, una vez iniciado el juego es necesario ir colocando de forma secuencial cada carta en una superficie plana, por ejemplo, una mesa. Tendras que pasar a la siguiente carta solo cuando hayas seleccionado algunas de las opciones de las tres que tienes disponibles, enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil, seguidamente se proyectara el personaje en 3D. 
+
+
+### Instrucciones de juego.
+Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cartas o Flash cards que contienen el hábitat de los personajes, una vez iniciado el juego es necesario ir colocando de forma secuencial cada carta en una superficie plana, por ejemplo, una mesa. Tendras que pasar a la siguiente carta solo cuando hayas seleccionado algunas de las opciones de las tres que tienes disponibles, enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil, seguidamente se proyectara el personaje en 3D
 
 La temática del juego se basa en acertar el mayor número de nombres de los animales proyectados en 2 minutos, para ello el jugador cuenta con 3 ayudas que le facilitaran dicha tarea. Podrás repetir las veces que quieras, el ganador del juego será el alumno que haya acertado el mayor número de nombres de personajes.
 
@@ -43,12 +46,14 @@ La temática del juego se basa en acertar el mayor número de nombres de los ani
 #### Ayuda 1
 Está ayuda te permite añadir 30 segundos más a tu partida, pero recuerda, solo podrás utilizarla una vez y solo cuando hayan pasado los 30 primeros segundos del juego, es decir, a partir de los 90 segundos restantes que te queden de partida.
 
-![Imagen de ayuda1](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FAyuda_1.png?alt=media&token=1bf64a99-7a5a-46b1-a112-6d6982cd1146 "Ayuda 1, Mis Palabras en Inglés").
+![Imagen de ayuda1](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FAyuda_1.png?alt=media&token=1bf64a99-7a5a-46b1-a112-6d6982cd1146 "Ayuda 1, Mis Palabras en Inglés")
+
 
 #### Ayuda 2
 Está ayuda te permite destruir una de las opciones, de las tres que tienes disponibles.
 
-![Imagen de ayuda2](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FAyuda_2.png?alt=media&token=9dd641e5-27ae-4a54-a866-146e3febeed8 "Ayuda 2, Mis Palabras en Inglés").
+![Imagen de ayuda2](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FAyuda_2.png?alt=media&token=9dd641e5-27ae-4a54-a866-146e3febeed8 "Ayuda 2, Mis Palabras en Inglés")
+
 
 #### Ayuda 3
 Está ayuda, llamada ayuda mágica, te dará información adicional relacionada con el personaje proyectado, esto te permitirá, determinar el nombre del personaje correcto, que estás viendo en pantalla.
@@ -71,33 +76,38 @@ podrás repetir partida o salir del juego, pulsando, en los botones habilitados 
 ![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FGame_over.png?alt=media&token=06286c82-7b3b-416a-8329-70e57f605a2f "Game Over, Mis Palabras en Inglés").
 
 ### Restricciones del juego
-1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
+> 1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
 2. Las tres ayudas solo se pueden utilizar una vez por partida.
 3. Solo hay una opción correcta, de las tres que tienes disponibles.
 4. El sistema no te permitira escanear una carta nueva hasta que no selecciones el nombre de una las opciones que tienes disponibles.
 
+                                            *********************************************************************
 
 
-
-## Panel de administración
+# Panel de administración
 Se crea un panel para el profesor o responsable de la asignatura, en este panel se podra realizar funciones como borrar, editar y añadir una carta nueva.
 
 ### Registo
 Para acceder al panel de administración es necesario realizar un registro inicial, para ello es necesario que facilites tu correo electrónico y una contraseña que tenga como mínimo 8 dígitos.
 
-![Imagen del registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FRegistro_web.png?alt=media&token=7b57d143-f672-42f2-a13a-54bdabda3860 " Registo admin, Mis Palabras en Inglés").
+![Imagen del registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FRegistro_web.png?alt=media&token=7b57d143-f672-42f2-a13a-54bdabda3860 " Registo admin, Mis Palabras en Inglés")
+
+
 
 ### Login
 Un vez registrado podras acceder al panel de administración, escribiendo en los campos habilitados para tal fin, tu email y contraseña que indicaste en el campo registro.
 
-![Imagen del login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin_web.png?alt=media&token=8c506843-19d4-4560-a7e0-38e24ed3a9f0 " login admin, Mis Palabras en Inglés").
+![Imagen del login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin_web.png?alt=media&token=8c506843-19d4-4560-a7e0-38e24ed3a9f0 " login admin, Mis Palabras en Inglés")
 
 
 ### Panel Principal
 Una vez dentro del panel principal, podrás ver todas las cartas que tienes disponibles y qué están listas para ser escaneadas, en cada carta tiene dos botones donde podrás borrar o editar la carta seleccionada (flecha verde).
 Para añadir una nueva carta tendrás que pulsar en botón superior derecho (flecha roja). Una vez terminada la administración del juego podrás salir del panel pulsando en botón de menú (flecha amarilla).
 
+
 ![Imagen del Panel Principal](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpanel_web.png?alt=media&token=372570f6-d268-436e-b14a-22052ebc866d " Panel principal del administrador, Mis Palabras en Inglés").
+
+
 
 ### Formulario de Edición
 El formulario de edición te permitirá, editar la descripción que vera el alumno, que corresponde a la tercera ayuda en la aplicación móvil, es necesario que tenga una descripción de más de 10 caracteres, para que el formulario te deje continuar.
@@ -111,6 +121,7 @@ En relación con el apartado de añadir una imagen, si no la quieres, es necesar
 Al igual que en el apartado de edición, en este formulario podrás añadir una nueva carta, en este formulario, es importa que el nombre con el que llames a la carta, este tiene que estar en inglés, ya que ese nombre será el que utilice la aplicación para asociar la carta a la figura en 3D, si no lo haces, la figura en 3D no se mostrará.
 Para los apartados de descripción, tamaño e imagen se siguen las mismas pautas explicadas en el apartado de edición.
 
+
 ![Imagen del Formulario para añadir una nueva carta](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fform_add_web.png?alt=media&token=dbf3767f-09bf-421d-831a-ec605e9d375c "Formulario para añadir una nueva carta, Mis Palabras en Inglés").
 
 
@@ -119,11 +130,13 @@ Para los apartados de descripción, tamaño e imagen se siguen las mismas pautas
 Para borrar una carta, tienes que pulsar el botón creado para tal fin, situado en la posición inferior de cada carta, lo único que tiene que tener en cuenta, que la carta puede tardar hasta 10 minutos en ser borrada en la base de datos de Vuforia.
 
 
+
 ### Restricciones de imagen (Target)
 Vuforia establece una serie de restricciones que permiten mejorar la calidad de la detección, si estas reglas no se siguen experimentaras problemas a la hora de escanear las cartas en el juego o incluso la aplicación no te permitirá crearlas.
 Las restricciones son las siguientes:
 
-1. La imagen debe tener un nivel de "contraste alto", se recomienda mejorar el contraste local de la imagen, utilizando herramientas de edición de imagen.
+
+> 1. La imagen debe tener un nivel de "contraste alto", se recomienda mejorar el contraste local de la imagen, utilizando herramientas de edición de imagen.
 2. Tiene que ser una imagen clara, con muchos elementos para facilitar su identificación.
 4. No puede superar los 2MB de tamaño.
 5. Admite solo formatos en PNG y JPG.
@@ -133,14 +146,15 @@ Las restricciones son las siguientes:
 9. El material de impresión tiene que ser en cartón, cartulina, aunque se puede imprimir en DINA4, pero evitando que la misma se doble.
 10. Evitar utilizar materiales de impresión reflectantes.
 
+
 ###### Comparativa de contraste local
 En la imagen se puede ver la comparativa de una imagen con el contraste bajo (mala calidad de detención) y la misma imagen una vez se mejora su contraste
 ![Comparativa de contraste , fuente Vuforia](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fejemplo_de_imagen.png?alt=media&token=f31c11b3-f3d6-4b7e-9811-410be36347b8  "Comparativa de contraste").
 
-La imagen y las restriciones se pueden consultar en la documentación oficial de vuforia.
+La imagen y las restriciones se pueden consultar en la documentación oficial de vuforia, siguiendo los siguiene enlaces
 
-1. Mejores practicas [Link](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets.html "Best Practices").
-2. Técnicas de optimización(https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
+1. Mejores practicas [Best Practices](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets.html "Best Practices").
+2. Técnicas de optimización de [objetivos de imagen ](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
 
 
 
