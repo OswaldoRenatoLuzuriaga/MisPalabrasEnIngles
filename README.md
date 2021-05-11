@@ -48,25 +48,25 @@ La temática del juego se basa en acertar el mayor número de nombres de los ani
   Está ayuda te permite añadir 30 segundos más a tu partida, pero recuerda, solo podrás utilizarla una vez y solo cuando hayan pasado los 30 primeros segundos del juego, es 
   decir, a partir de los 90 segundos restantes que te queden de partida.
 
-![Imagen de ayuda1](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FAyuda_1.png?alt=media&token=1bf64a99-7a5a-46b1-a112-6d6982cd1146 "Ayuda 1, Mis Palabras en Inglés")
+![Imagen de ayuda1](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_1.jpg?alt=media&token=80b018e0-1334-4f93-ac22-056be2635b69 "Ayuda 1, Mis Palabras en Inglés")
 
 
  #### - Ayuda 2
 Está ayuda te permite destruir una de las opciones, de las tres que tienes disponibles.
 
-![Imagen de ayuda2](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FAyuda_2.png?alt=media&token=9dd641e5-27ae-4a54-a866-146e3febeed8 "Ayuda 2, Mis Palabras en Inglés")
+![Imagen de ayuda2](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_2.jpg?alt=media&token=1a13b43d-2b48-43d0-9ce1-e8f51a6d067f "Ayuda 2, Mis Palabras en Inglés")
 
 
 #### - Ayuda 3
 Está ayuda, llamada ayuda mágica, te dará información adicional relacionada con el personaje proyectado, esto te permitirá, determinar el nombre del personaje correcto, que estás viendo en pantalla.
 
-![Imagen de ayuda3](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FAyuda_3.png?alt=media&token=a1361fb9-cb24-4494-843c-b01eb8bcabb6 "Ayuda 3, Mis Palabras en Inglés").
+![Imagen de ayuda3](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_3.jpg?alt=media&token=151388b1-746f-4cf8-b8fa-5793829c364f "Ayuda 3, Mis Palabras en Inglés").
 
 ### 5. Pausa
 La aplicación cuenta con un botón que te permite poner en pausa o salir de la partida, este botón está situado en la parte inferior derecha de tu pantalla.
 
 
-![Imagen de pausa](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FPausa.png?alt=media&token=682be0a5-e299-4358-a5c8-da65abd25eb7 "Pausa, Mis Palabras en Inglés").
+![Imagen de pausa](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpausa.jpg?alt=media&token=d0ec46a5-1725-411c-807b-e783c58840e7 "Pausa, Mis Palabras en Inglés").
 
 ### 6. Game Over
 Una vez acabado los 2 minutos que tenías disponibles para acabar tu partida, la aplicación, te mostrara los puntos que has obtenido es esa partida, además, te indicara el récord de puntos que has obtenido en la mejor partida que has jugado, si los puntos obtenidos son más altos al récord anterior, estos se actualizarán, mostrando el mejor puntaje obtenido hasta la fecha.
@@ -75,7 +75,7 @@ Una vez acabado los 2 minutos que tenías disponibles para acabar tu partida, la
 Podrás repetir la partida las veces que quieras o si lo prefieres podras salir del juego, pulsando, en los botones habilitados para tal fin.
 
 
-![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FGame_over.png?alt=media&token=06286c82-7b3b-416a-8329-70e57f605a2f "Game Over, Mis Palabras en Inglés").
+![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fgame_over.jpg?alt=media&token=170c88f9-6963-452a-8726-23808eae7325 "Game Over, Mis Palabras en Inglés").
 
 ### 7. Restricciones del juego
 > 1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
