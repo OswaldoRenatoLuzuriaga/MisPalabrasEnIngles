@@ -119,7 +119,7 @@ En relación con el tamaño de la figura en 3D que vera el alumno, puedes escoge
 En relación con el apartado de añadir una imagen, si no quieres editar la imagen, es necesario que carges la imagen que ya tenías para que el formulario te deje continuar y si es una imagen nueva "recuerda", está imagen tiene que cumplir las restricciones, que se indican en el aparta "Restricciones de imagen"
 
 
-![Imagen del Formulario de edición](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpanel_web.png?alt=media&token=372570f6-d268-436e-b14a-22052ebc866d "Formulario de edición, Mis Palabras en Inglés")
+![Imagen del Formulario de edición](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fedici%C3%B3n_web.png?alt=media&token=1e458ca5-1a66-422d-838f-b60ae077b6be "Formulario de edición, Mis Palabras en Inglés")
 
 ### 5. Añadir una nueva carta
 En este formulario podrás añadir una nueva carta, en este formulario, es importa que el nombre que des a la carta esté en inglés, ya que ese nombre será el que utilice la aplicación para asociar la carta a la figura en 3D, si no lo haces, la figura en 3D no se mostrará.
