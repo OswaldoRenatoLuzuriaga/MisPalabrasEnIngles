@@ -76,3 +76,75 @@ podrás repetir partida o salir del juego, pulsando, en los botones habilitados 
 3. Solo hay una opción correcta, de las tres que tienes disponibles.
 4. El sistema no te permitira escanear una carta nueva hasta que no selecciones el nombre de una las opciones que tienes disponibles.
 
+
+
+
+## Panel de administración
+Se crea un panel para el profesor o responsable de la asignatura, en este panel se podra realizar funciones como borrar, editar y añadir una carta nueva.
+
+### Registo
+Para acceder al panel de administración es necesario realizar un registro inicial, para ello es necesario que facilites tu correo electrónico y una contraseña que tenga como mínimo 8 dígitos.
+
+![Imagen del registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FRegistro_web.png?alt=media&token=7b57d143-f672-42f2-a13a-54bdabda3860 " Registo admin, Mis Palabras en Inglés").
+
+### Login
+Un vez registrado podras acceder al panel de administración, escribiendo en los campos habilitados para tal fin, tu email y contraseña que indicaste en el campo registro.
+
+![Imagen del login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin_web.png?alt=media&token=8c506843-19d4-4560-a7e0-38e24ed3a9f0 " login admin, Mis Palabras en Inglés").
+
+
+### Panel Principal
+Una vez dentro del panel principal, podrás ver todas las cartas que tienes disponibles y qué están listas para ser escaneadas, en cada carta tiene dos botones donde podrás borrar o editar la carta seleccionada (flecha verde).
+Para añadir una nueva carta tendrás que pulsar en botón superior derecho (flecha roja). Una vez terminada la administración del juego podrás salir del panel pulsando en botón de menú (flecha amarilla).
+
+![Imagen del Panel Principal](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpanel_web.png?alt=media&token=372570f6-d268-436e-b14a-22052ebc866d " Panel principal del administrador, Mis Palabras en Inglés").
+
+### Formulario de Edición
+El formulario de edición te permitirá, editar la descripción que vera el alumno, que corresponde a la tercera ayuda en la aplicación móvil, es necesario que tenga una descripción de más de 10 caracteres, para que el formulario te deje continuar.
+En relación con el tamaño de la figura en 3D que vera el alumno, puedes escoger entre, [pequeño, mediano, grande].
+En relación con el apartado de añadir una imagen, si no la quieres, es necesario que carges la imagen que ya tenías para que el formulario te deje continuar y si es una imagen nueva "recuerda", está imagen tiene que cumplir las restricciones, que se indican en el aparta "Restricciones de imagen"
+
+
+![Imagen del Formulario de edición](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpanel_web.png?alt=media&token=372570f6-d268-436e-b14a-22052ebc866d "Formulario de edición, Mis Palabras en Inglés").
+
+### Añadir una nueva carta
+Al igual que en el apartado de edición, en este formulario podrás añadir una nueva carta, en este formulario, es importa que el nombre con el que llames a la carta, este tiene que estar en inglés, ya que ese nombre será el que utilice la aplicación para asociar la carta a la figura en 3D, si no lo haces, la figura en 3D no se mostrará.
+Para los apartados de descripción, tamaño e imagen se siguen las mismas pautas explicadas en el apartado de edición.
+
+![Imagen del Formulario para añadir una nueva carta](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fform_add_web.png?alt=media&token=dbf3767f-09bf-421d-831a-ec605e9d375c "Formulario para añadir una nueva carta, Mis Palabras en Inglés").
+
+
+
+### Borrar una carta
+Para borrar una carta, tienes que pulsar el botón creado para tal fin, situado en la posición inferior de cada carta, lo único que tiene que tener en cuenta, que la carta puede tardar hasta 10 minutos en ser borrada en la base de datos de Vuforia.
+
+
+### Restricciones de imagen (Target)
+Vuforia establece una serie de restricciones que permiten mejorar la calidad de la detección, si estas reglas no se siguen experimentaras problemas a la hora de escanear las cartas en el juego o incluso la aplicación no te permitirá crearlas.
+Las restricciones son las siguientes:
+
+1. La imagen debe tener un nivel de "contraste alto", se recomienda mejorar el contraste local de la imagen, utilizando herramientas de edición de imagen.
+2. Tiene que ser una imagen clara, con muchos elementos para facilitar su identificación.
+4. No puede superar los 2MB de tamaño.
+5. Admite solo formatos en PNG y JPG.
+6. La imagen tiene que ser de 8 a 24 bits como Max.
+7. Admite imágenes en color o en gris.
+8. Evitar imagenes que solo contengan elementos órganicos (circulos, figuras circulares, etc).
+9. El material de impresión tiene que ser en cartón, cartulina, aunque se puede imprimir en DINA4, pero evitando que la misma se doble.
+10. Evitar utilizar materiales de impresión reflectantes.
+
+###### Comparativa de contraste local
+En la imagen se puede ver la comparativa de una imagen con el contraste bajo (mala calidad de detención) y la misma imagen una vez se mejora su contraste
+![Comparativa de contraste , fuente Vuforia](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fejemplo_de_imagen.png?alt=media&token=f31c11b3-f3d6-4b7e-9811-410be36347b8  "Comparativa de contraste").
+
+La imagen y las restriciones se pueden consultar en la documentación oficial de vuforia.
+
+1. Mejores practicas [Link](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets.html "Best Practices").
+2. Técnicas de optimización(https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
+
+
+
+
+
+
+
