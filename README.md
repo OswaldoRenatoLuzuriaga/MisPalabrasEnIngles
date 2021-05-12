@@ -4,7 +4,7 @@
 En la actualidad, en un mundo globalizado donde la tecnología avanza a pasos agigantados, el conocimiento del inglés se hace imprescindible.
 Adquirir este conocimiento a edades tempranas, cuando el menor es aun más receptivo, es esencial. Al contar con una capacidad de asimilación superior, el apendizaje de una segunda lengua se da de forma natural, más aun si les proporcionamos las herramientas adecuadas para que esto suceda.
 
-El trabajo fin de grado se basa el desarrollo de una herramienta educativa que enseña vocabulario a niños de edades tempranas, utilizando como método de aprendizaje la realidad aumentada, esto le facilita un entorno lúdico, entretenido y de fácil asimilación.
+El trabajo fin de grado se basa en el desarrollo de una herramienta educativa que enseña vocabulario a niños de edades tempranas, utilizando como método de aprendizaje la realidad aumentada, esto le facilita un entorno lúdico, entretenido y de fácil asimilación.
 
 ## Instalación
 Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tú teléfono móvil, esto te permita instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes :
