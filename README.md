@@ -43,7 +43,7 @@ Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cart
 La temática del juego se basa en acertar el mayor número de nombres de los animales proyectados en 2 minutos, para ello el jugador cuenta con 3 ayudas que le facilitaran dicha tarea. Podrás repetir las veces que quieras, el ganador del juego será el alumno que haya acertado el mayor número de nombres de personajes.
 
 
- ####- Ayuda 1
+ #### - Ayuda 1
   Está ayuda te permite añadir 30 segundos más a tu partida, pero recuerda, solo podrás utilizarla una vez y solo cuando hayan pasado los 30 primeros segundos del juego, es 
   decir, a partir de los 90 segundos restantes que te queden de partida.
 
@@ -59,13 +59,13 @@ Está ayuda te permite destruir una de las opciones, de las tres que tienes disp
 #### - Ayuda 3
 Está ayuda, llamada ayuda mágica, te dará información adicional relacionada con el personaje proyectado, esto te permitirá, determinar el nombre del personaje correcto, que estás viendo en pantalla.
 
-![Imagen de ayuda3](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_3.jpg?alt=media&token=151388b1-746f-4cf8-b8fa-5793829c364f "Ayuda 3, Mis Palabras en Inglés").
+![Imagen de ayuda3](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_3.jpg?alt=media&token=151388b1-746f-4cf8-b8fa-5793829c364f "Ayuda 3, Mis Palabras en Inglés")
 
 ### 5. Pausa
 La aplicación cuenta con un botón que te permite poner en pausa o salir de la partida, este botón está situado en la parte inferior derecha de tu pantalla.
 
 
-![Imagen de pausa](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpausa.jpg?alt=media&token=d0ec46a5-1725-411c-807b-e783c58840e7 "Pausa, Mis Palabras en Inglés").
+![Imagen de pausa](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpausa.jpg?alt=media&token=d0ec46a5-1725-411c-807b-e783c58840e7 "Pausa, Mis Palabras en Inglés")
 
 ### 6. Game Over
 Una vez acabado los 2 minutos que tenías disponibles para acabar tu partida, la aplicación, te mostrara los puntos que has obtenido es esa partida, además, te indicara el récord de puntos que has obtenido en la mejor partida que has jugado, si los puntos obtenidos son más altos al récord anterior, estos se actualizarán, mostrando el mejor puntaje obtenido hasta la fecha.
@@ -74,7 +74,7 @@ Una vez acabado los 2 minutos que tenías disponibles para acabar tu partida, la
 Podrás repetir la partida las veces que quieras o si lo prefieres podrás salir del juego, pulsando, en los botones habilitados para tal fin.
 
 
-![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fgame_over.jpg?alt=media&token=170c88f9-6963-452a-8726-23808eae7325 "Game Over, Mis Palabras en Inglés").
+![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fgame_over.jpg?alt=media&token=170c88f9-6963-452a-8726-23808eae7325 "Game Over, Mis Palabras en Inglés")
 
 ### 7. Restricciones del juego
 1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
