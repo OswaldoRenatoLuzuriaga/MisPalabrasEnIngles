@@ -8,11 +8,11 @@ El trabajo fin de grado se basa en el desarrollo de una herramienta educativa qu
 ## Instalación
 Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tú teléfono móvil, esto te permita instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes:
 
-> 1. Descargar la APK Mis Primeras Palabras en inglés.
-> 2. Ir Ajustes.
-> 3. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
-> 4. Una vez tengas habilitados los permisos, instalas la aplicación.
-> 5. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importantes que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
+1. Descargar la APK Mis Primeras Palabras en inglés.
+2. Ir Ajustes.
+3. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
+4. Una vez tengas habilitados los permisos, instalas la aplicación.
+5. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importantes que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
 
 ## Desarrollo del juego
 
@@ -77,18 +77,18 @@ Podrás repetir la partida las veces que quieras o si lo prefieres podrás salir
 ![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fgame_over.jpg?alt=media&token=170c88f9-6963-452a-8726-23808eae7325 "Game Over, Mis Palabras en Inglés").
 
 ### 7. Restricciones del juego
-> 1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
-> 2. Las tres ayudas solo se pueden utilizar una vez por partida.
-> 3. Solo hay una opción correcta, de las tres que tienes disponibles.
-> 4. El sistema no te permitirá escanear una carta nueva, hasta que no hayas pulsado en los botones de opciones que tienes disponibles (Zona inferior de tu pantalla)
-> 5. Escoge un lugar interior y una superficie plana para jugar, evita jugar en el exterior o con ambientes con exceso de luz.
-> 6. Enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil y la carta.
+1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
+2. Las tres ayudas solo se pueden utilizar una vez por partida.
+3. Solo hay una opción correcta, de las tres que tienes disponibles.
+4. El sistema no te permitirá escanear una carta nueva, hasta que no hayas pulsado en los botones de opciones que tienes disponibles (Zona inferior de tu pantalla)
+5. Escoge un lugar interior y una superficie plana para jugar, evita jugar en el exterior o con ambientes con exceso de luz.
+6. Enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil y la carta.
 
                                            
 
 
 # Panel web para el administrador del juego.
-Se crea un panel para el profesor o responsable de la asignatura, en este panel se podrá realizar funciones como borrar, editar y añadir una carta nueva.
+Se crea un panel para el profesor o padres del alumno, en este panel se podrá realizar funciones como borrar, editar y añadir una carta nueva.
 
 ### 1. Registro
 Para acceder al panel de administración es necesario realizar un registro inicial, para ello es necesario que facilites tu correo electrónico y una contraseña que tenga como mínimo 8 dígitos.
@@ -139,15 +139,15 @@ Vuforia establece una serie de restricciones que permiten mejorar la calidad de 
 Las restricciones son las siguientes:
 
 
-> 1. La imagen debe tener un nivel de "contraste alto", se recomienda mejorar el contraste local de la imagen, utilizando herramientas de edición de imagen.
-> 2. Tiene que ser una imagen clara, con muchos elementos para facilitar su identificación.
-> 4. No puede superar los 2MB de tamaño.
-> 5. Admite solo formatos en PNG y JPG.
-> 6. La imagen tiene que ser de 8 a 24 bits como Max.
-> 7. Admite imágenes en color o en gris.
-> 8. Evitar imágenes que solo contengan elementos orgánicos (círculos, figuras circulares, etc.).
-> 9. El material de impresión tiene que ser en cartón, cartulina, aunque se puede imprimir en DINA4, pero evitando que la misma se doble.
-> 10. Evitar utilizar materiales de impresión reflectantes.
+1. La imagen debe tener un nivel de "contraste alto", se recomienda mejorar el contraste local de la imagen, utilizando herramientas de edición de imagen.
+2. Tiene que ser una imagen clara, con muchos elementos para facilitar su identificación.
+4. No puede superar los 2MB de tamaño.
+5. Admite solo formatos en PNG y JPG.
+6. La imagen tiene que ser de 8 a 24 bits como Max.
+7. Admite imágenes en color o en gris.
+8. Evitar imágenes que solo contengan elementos orgánicos (círculos, figuras circulares, etc.).
+9. El material de impresión tiene que ser en cartón, cartulina, aunque se puede imprimir en DINA4, pero evitando que la misma se doble.
+10. Evitar utilizar materiales de impresión reflectantes.
 
 
 ### 8. Comparativa de contraste local
