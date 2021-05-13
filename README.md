@@ -43,13 +43,13 @@ Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cart
 La temática del juego se basa en acertar el mayor número de nombres de los animales proyectados en 2 minutos, para ello el jugador cuenta con 3 ayudas que le facilitarán dicha tarea. Podrás repetir las veces que quieras, el ganador del juego será el alumno que haya acertado el mayor número de nombres de personajes.
 
 
- #### - Ayuda 1
+#### - Ayuda 1
   Esta ayuda te permite añadir 30 segundos más a tu partida, pero recuerda, solo podrás utilizarla una vez y solo cuando hayan pasado los 30 primeros segundos del juego, es decir, a partir de los 90 segundos restantes que te queden de partida.
 
 ![Imagen de ayuda1](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_1.jpg?alt=media&token=80b018e0-1334-4f93-ac22-056be2635b69 "Ayuda 1, Mis Palabras en Inglés")
 
 
- #### - Ayuda 2
+#### - Ayuda 2
 Esta ayuda te permite destruir una de las opciones, de las tres que tienes disponibles.
 
 ![Imagen de ayuda2](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_2.jpg?alt=media&token=1a13b43d-2b48-43d0-9ce1-e8f51a6d067f "Ayuda 2, Mis Palabras en Inglés")
