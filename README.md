@@ -6,13 +6,13 @@ Adquirir este conocimiento a edades tempranas, cuando el menor es aún más rece
 El trabajo fin de grado se basa en el desarrollo de una herramienta educativa que enseña vocabulario a niños de edades tempranas, utilizando como método de aprendizaje la realidad aumentada, esto le facilita un entorno lúdico, entretenido y de fácil asimilación.
 
 ## Instalación
-Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tú teléfono móvil, esto te permita instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes:
+Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tu teléfono móvil, esto te permite instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes:
 
 1. Descargar la APK Mis Primeras Palabras en inglés.
-2. Ir Ajustes.
+2. Ir a Ajustes.
 3. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
 4. Una vez tengas habilitados los permisos, instalas la aplicación.
-5. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importantes que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
+5. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importante que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
 
 ## Desarrollo del juego
 
@@ -30,7 +30,7 @@ Para iniciar la aplicación necesitas introducir en los campos habilitados para 
 ![Imagen de login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin.png?alt=media&token=b24820a0-0277-4b28-82f6-b5aaf69b8972 "Login, Mis Palabras en Inglés")
 
 ### 3. Regular el nivel de volumen de la música de fondo y efectos de sonido.
-Una vez te hayas logado en la aplicación, tendrás acceso, a la portada principal, aquí encontradas el botón de ajustes de sonido, aquí podrás ajustar los niveles de volumen de los efectos de sonido y la música de fondo.
+Una vez hayas iniciado sesión en la aplicación, tendrás acceso a la portada principal, aquí encontrarás el botón de ajustes de sonido, aquí podrás ajustar los niveles de volumen de los efectos de sonido y la música de fondo.
 
 
 ![Imagen de conf](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fniveles_de_sonido.png?alt=media&token=90ddbd19-6d34-47c4-930a-ffb14b86873e "Conf nivel de sonido, Mis Palabras en Inglés")
@@ -38,26 +38,25 @@ Una vez te hayas logado en la aplicación, tendrás acceso, a la portada princip
 
 
 ### 4. Instrucciones de juego.
-Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cartas o Flash cards, una vez iniciado el juego es necesario ir colocando de forma secuencial cada carta en una superficie plana, por ejemplo, una mesa. Tendrás que pasar a la siguiente carta solo cuando hayas seleccionado algunas de las opciones de las tres que tienes disponibles, enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil, seguidamente se proyectara el personaje en 3D
+Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cartas o Flash cards, una vez iniciado el juego es necesario ir colocando de forma secuencial cada carta en una superficie plana, por ejemplo, una mesa. Tendrás que pasar a la siguiente carta sólo cuando hayas seleccionado algunas de las opciones de las tres que tienes disponibles, enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil, seguidamente se proyectará el personaje en 3D
 
-La temática del juego se basa en acertar el mayor número de nombres de los animales proyectados en 2 minutos, para ello el jugador cuenta con 3 ayudas que le facilitaran dicha tarea. Podrás repetir las veces que quieras, el ganador del juego será el alumno que haya acertado el mayor número de nombres de personajes.
+La temática del juego se basa en acertar el mayor número de nombres de los animales proyectados en 2 minutos, para ello el jugador cuenta con 3 ayudas que le facilitarán dicha tarea. Podrás repetir las veces que quieras, el ganador del juego será el alumno que haya acertado el mayor número de nombres de personajes.
 
 
  #### - Ayuda 1
-  Está ayuda te permite añadir 30 segundos más a tu partida, pero recuerda, solo podrás utilizarla una vez y solo cuando hayan pasado los 30 primeros segundos del juego, es 
-  decir, a partir de los 90 segundos restantes que te queden de partida.
+  Esta ayuda te permite añadir 30 segundos más a tu partida, pero recuerda, solo podrás utilizarla una vez y solo cuando hayan pasado los 30 primeros segundos del juego, es decir, a partir de los 90 segundos restantes que te queden de partida.
 
 ![Imagen de ayuda1](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_1.jpg?alt=media&token=80b018e0-1334-4f93-ac22-056be2635b69 "Ayuda 1, Mis Palabras en Inglés")
 
 
  #### - Ayuda 2
-Está ayuda te permite destruir una de las opciones, de las tres que tienes disponibles.
+Esta ayuda te permite destruir una de las opciones, de las tres que tienes disponibles.
 
 ![Imagen de ayuda2](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_2.jpg?alt=media&token=1a13b43d-2b48-43d0-9ce1-e8f51a6d067f "Ayuda 2, Mis Palabras en Inglés")
 
 
 #### - Ayuda 3
-Está ayuda, llamada ayuda mágica, te dará información adicional relacionada con el personaje proyectado, esto te permitirá, determinar el nombre del personaje correcto, que estás viendo en pantalla.
+Esta ayuda, llamada ayuda mágica, te dará información adicional relacionada con el personaje proyectado, esto te permitirá, determinar el nombre del personaje correcto, que estás viendo en pantalla.
 
 ![Imagen de ayuda3](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fayuda_3.jpg?alt=media&token=151388b1-746f-4cf8-b8fa-5793829c364f "Ayuda 3, Mis Palabras en Inglés")
 
@@ -68,7 +67,7 @@ La aplicación cuenta con un botón que te permite poner en pausa o salir de la 
 ![Imagen de pausa](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpausa.jpg?alt=media&token=d0ec46a5-1725-411c-807b-e783c58840e7 "Pausa, Mis Palabras en Inglés")
 
 ### 6. Game Over
-Una vez acabado los 2 minutos que tenías disponibles para acabar tu partida, la aplicación, te mostrara los puntos que has obtenido es esa partida, además, te indicara el récord de puntos que has obtenido en la mejor partida que has jugado, si los puntos obtenidos son más altos al récord anterior, estos se actualizarán, mostrando el mejor puntaje obtenido hasta la fecha.
+Una vez acabado los 2 minutos que tenías disponibles para acabar tu partida, la aplicación, te mostrará los puntos que has obtenido es esa partida, además, te indicará el récord de puntos que has obtenido en la mejor partida que has jugado, si los puntos obtenidos son más altos al récord anterior, estos se actualizarán, mostrando el mejor puntaje obtenido hasta la fecha.
 
 
 Podrás repetir la partida las veces que quieras o si lo prefieres podrás salir del juego, pulsando, en los botones habilitados para tal fin.
@@ -113,15 +112,15 @@ Para añadir una nueva carta tendrás que pulsar el botón superior derecho (fle
 
 
 ### 4. Formulario de Edición
-El formulario de edición te permitirá, editar la descripción que vera el alumno, que corresponde a la tercera ayuda en la aplicación móvil, es necesario que tenga una descripción de más de 10 caracteres, para que el formulario te deje continuar.
-En relación con el tamaño de la figura en 3D que vera el alumno, puedes escoger entre tres tipos de tamaño [pequeño, mediano, grande].
-En relación con el apartado de añadir una imagen, si no quieres editar la imagen, es necesario que cargues la imagen que ya tenías para que el formulario te deje continuar y si es una imagen nueva "recuerda", está imagen tiene que cumplir las restricciones, que se indican en el apartado "Restricciones de imagen"
+El formulario de edición te permitirá, editar la descripción que verá el alumno, que corresponde a la tercera ayuda en la aplicación móvil, es necesario que tenga una descripción de más de 10 caracteres, para que el formulario te deje continuar.
+En relación con el tamaño de la figura en 3D que verá el alumno, puedes escoger entre tres tipos de tamaño [pequeño, mediano, grande].
+En relación con el apartado de añadir una imagen, si no quieres editar la imagen, es necesario que cargues la imagen que ya tenías para que el formulario te deje continuar y si es una imagen nueva "recuerda", esta imagen tiene que cumplir las restricciones, que se indican en el apartado "Restricciones de imagen"
 
 
 ![Imagen del Formulario de edición](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fedici%C3%B3n_web.png?alt=media&token=1e458ca5-1a66-422d-838f-b60ae077b6be "Formulario de edición, Mis Palabras en Inglés")
 
 ### 5. Añadir una nueva carta
-En este formulario podrás añadir una nueva carta, en este formulario, es importa que el nombre que des a la carta esté en inglés, ya que ese nombre será el que utilice la aplicación para asociar la carta a la figura en 3D, si no lo haces, la figura en 3D no se mostrará.
+En este formulario podrás añadir una nueva carta, en este formulario, es importante que el nombre que des a la carta esté en inglés, ya que ese nombre será el que utilice la aplicación para asociar la carta a la figura en 3D, si no lo haces, la figura en 3D no se mostrará.
 Para los apartados de descripción, tamaño e imagen se siguen las mismas pautas explicadas en el apartado de edición.
 
 
@@ -135,7 +134,7 @@ Para borrar una carta, tienes que pulsar el botón creado para tal fin, situado 
 
 
 ### 7. Restricciones de imagen (Target)
-Vuforia establece una serie de restricciones que permiten mejorar la calidad de la detección, si estas reglas no se siguen experimentaras problemas a la hora de escanear las cartas en el juego o incluso la aplicación no te permitirá crearlas.
+Vuforia establece una serie de restricciones que permiten mejorar la calidad de la detección, si estas reglas no se siguen experimentarás problemas a la hora de escanear las cartas en el juego o incluso la aplicación no te permitirá crearlas.
 Las restricciones son las siguientes:
 
 
@@ -160,6 +159,10 @@ La imagen y las restricciones se pueden consultar en la documentación oficial d
 
 1. Mejores prácticas [Best Practices](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets.html "Best Practices").
 2. Técnicas de optimización de [objetivos de imagen](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
+
+
+
+
 
 
 
