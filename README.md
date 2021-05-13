@@ -1,23 +1,22 @@
-# Mis Primeras Palabras en inglés
 
 ## Introducción
 En la actualidad, en un mundo globalizado donde la tecnología avanza a pasos agigantados, el conocimiento del inglés se hace imprescindible.
-Adquirir este conocimiento a edades tempranas, cuando el menor es aun más receptivo, es esencial. Al contar con una capacidad de asimilación superior, el apendizaje de una segunda lengua se da de forma natural, más aun si les proporcionamos las herramientas adecuadas para que esto suceda.
+Adquirir este conocimiento a edades tempranas, cuando el menor es aún más receptivo, es esencial. Al contar con una capacidad de asimilación superior, el aprendizaje de una segunda lengua se da de forma natural, más aún si les proporcionamos las herramientas adecuadas para que esto suceda.
 
 El trabajo fin de grado se basa en el desarrollo de una herramienta educativa que enseña vocabulario a niños de edades tempranas, utilizando como método de aprendizaje la realidad aumentada, esto le facilita un entorno lúdico, entretenido y de fácil asimilación.
 
 ## Instalación
-Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tú teléfono móvil, esto te permita instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes :
+Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tú teléfono móvil, esto te permita instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes:
 
 > 1. Descargar la APK Mis Primeras Palabras en inglés.
 > 2. Ir Ajustes.
 > 3. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
 > 4. Una vez tengas habilitados los permisos, instalas la aplicación.
-> 5. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importantes que los aceptes, si no los aceptas, no podras utilizar la aplicación.
+> 5. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importantes que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
 
 ## Desarrollo del juego
 
-### 1. Registo
+### 1. Registro
 Una vez instalada la aplicación es necesario que dispongas de una cuenta de usuario, solo se te pedirá el correo electrónico y una contraseña, te recomiendo que sea una contraseña de mínimo 8 dígitos entre números, letras y caracteres especiales.
 
 ![Imagen de registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fregistro.jpg?alt=media&token=d06b67ab-bd90-473b-b4c3-bdea659a6d63 "Registro, Mis Palabras en Inglés")
@@ -39,12 +38,12 @@ Una vez te hayas logado en la aplicación, tendrás acceso, a la portada princip
 
 
 ### 4. Instrucciones de juego.
-Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cartas o Flash cards, una vez iniciado el juego es necesario ir colocando de forma secuencial cada carta en una superficie plana, por ejemplo, una mesa. Tendras que pasar a la siguiente carta solo cuando hayas seleccionado algunas de las opciones de las tres que tienes disponibles, enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil, seguidamente se proyectara el personaje en 3D
+Para el desarrollo del juego el alumno tendrá a su disposición un mazo de cartas o Flash cards, una vez iniciado el juego es necesario ir colocando de forma secuencial cada carta en una superficie plana, por ejemplo, una mesa. Tendrás que pasar a la siguiente carta solo cuando hayas seleccionado algunas de las opciones de las tres que tienes disponibles, enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil, seguidamente se proyectara el personaje en 3D
 
 La temática del juego se basa en acertar el mayor número de nombres de los animales proyectados en 2 minutos, para ello el jugador cuenta con 3 ayudas que le facilitaran dicha tarea. Podrás repetir las veces que quieras, el ganador del juego será el alumno que haya acertado el mayor número de nombres de personajes.
 
 
- ####  - Ayuda 1
+ ####- Ayuda 1
   Está ayuda te permite añadir 30 segundos más a tu partida, pero recuerda, solo podrás utilizarla una vez y solo cuando hayan pasado los 30 primeros segundos del juego, es 
   decir, a partir de los 90 segundos restantes que te queden de partida.
 
@@ -72,7 +71,7 @@ La aplicación cuenta con un botón que te permite poner en pausa o salir de la 
 Una vez acabado los 2 minutos que tenías disponibles para acabar tu partida, la aplicación, te mostrara los puntos que has obtenido es esa partida, además, te indicara el récord de puntos que has obtenido en la mejor partida que has jugado, si los puntos obtenidos son más altos al récord anterior, estos se actualizarán, mostrando el mejor puntaje obtenido hasta la fecha.
 
 
-Podrás repetir la partida las veces que quieras o si lo prefieres podras salir del juego, pulsando, en los botones habilitados para tal fin.
+Podrás repetir la partida las veces que quieras o si lo prefieres podrás salir del juego, pulsando, en los botones habilitados para tal fin.
 
 
 ![Imagen de Game Over](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fgame_over.jpg?alt=media&token=170c88f9-6963-452a-8726-23808eae7325 "Game Over, Mis Palabras en Inglés").
@@ -81,32 +80,32 @@ Podrás repetir la partida las veces que quieras o si lo prefieres podras salir 
 > 1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
 > 2. Las tres ayudas solo se pueden utilizar una vez por partida.
 > 3. Solo hay una opción correcta, de las tres que tienes disponibles.
-> 4. El sistema no te permitira escanear una carta nueva, hasta que no hayas pulsado en los botones de opciones que tienes disponibles (Zona inferior de tu pantalla)
-> 5. Escoge una lugar interior y una superficie plana para jugar, evita jugar en el exterior o con ambientes con exceso de luz.
+> 4. El sistema no te permitirá escanear una carta nueva, hasta que no hayas pulsado en los botones de opciones que tienes disponibles (Zona inferior de tu pantalla)
+> 5. Escoge un lugar interior y una superficie plana para jugar, evita jugar en el exterior o con ambientes con exceso de luz.
 > 6. Enfoca la carta con la aplicación, deja unos 20-30 centímetros de distancia con tu teléfono móvil y la carta.
 
                                            
 
 
 # Panel web para el administrador del juego.
-Se crea un panel para el profesor o responsable de la asignatura, en este panel se podra realizar funciones como borrar, editar y añadir una carta nueva.
+Se crea un panel para el profesor o responsable de la asignatura, en este panel se podrá realizar funciones como borrar, editar y añadir una carta nueva.
 
-### 1. Registo
+### 1. Registro
 Para acceder al panel de administración es necesario realizar un registro inicial, para ello es necesario que facilites tu correo electrónico y una contraseña que tenga como mínimo 8 dígitos.
 
-![Imagen del registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FRegistro_web.png?alt=media&token=7b57d143-f672-42f2-a13a-54bdabda3860 " Registo admin, Mis Palabras en Inglés")
+![Imagen del registro](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FRegistro_web.png?alt=media&token=7b57d143-f672-42f2-a13a-54bdabda3860 " Registro admin, Mis Palabras en Inglés")
 
 
 
 ### 2. Login
-Un vez registrado podras acceder al panel de administración, escribiendo en los campos habilitados para tal fin tu email y contraseña, los mismos que indicaste en el campo registro.
+Una vez registrado podrás acceder al panel de administración, escribiendo en los campos habilitados para tal fin tu email y contraseña, los mismos que indicaste en el campo registro.
 
 ![Imagen del login](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2FLogin_web.png?alt=media&token=8c506843-19d4-4560-a7e0-38e24ed3a9f0 " login admin, Mis Palabras en Inglés")
 
 
 ### 3. Panel Principal
 Una vez dentro del panel principal, podrás ver todas las cartas que tienes disponibles y qué están listas para ser escaneadas, cada carta tiene dos botones donde podrás borrar o editar la carta seleccionada (flecha verde).
-Para añadir una nueva carta tendrás que pulsar en botón superior derecho (flecha roja). Una vez terminada la administración del juego podrás salir del panel pulsando en botón de menú (flecha amarilla)
+Para añadir una nueva carta tendrás que pulsar el botón superior derecho (flecha roja). Una vez terminada la administración del juego podrás salir del panel pulsando el botón de menú (flecha amarilla)
 
 
 ![Imagen del Panel Principal](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fpanel_web.png?alt=media&token=372570f6-d268-436e-b14a-22052ebc866d " Panel principal del administrador, Mis Palabras en Inglés")
@@ -116,7 +115,7 @@ Para añadir una nueva carta tendrás que pulsar en botón superior derecho (fle
 ### 4. Formulario de Edición
 El formulario de edición te permitirá, editar la descripción que vera el alumno, que corresponde a la tercera ayuda en la aplicación móvil, es necesario que tenga una descripción de más de 10 caracteres, para que el formulario te deje continuar.
 En relación con el tamaño de la figura en 3D que vera el alumno, puedes escoger entre tres tipos de tamaño [pequeño, mediano, grande].
-En relación con el apartado de añadir una imagen, si no quieres editar la imagen, es necesario que carges la imagen que ya tenías para que el formulario te deje continuar y si es una imagen nueva "recuerda", está imagen tiene que cumplir las restricciones, que se indican en el aparta "Restricciones de imagen"
+En relación con el apartado de añadir una imagen, si no quieres editar la imagen, es necesario que cargues la imagen que ya tenías para que el formulario te deje continuar y si es una imagen nueva "recuerda", está imagen tiene que cumplir las restricciones, que se indican en el apartado "Restricciones de imagen"
 
 
 ![Imagen del Formulario de edición](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fedici%C3%B3n_web.png?alt=media&token=1e458ca5-1a66-422d-838f-b60ae077b6be "Formulario de edición, Mis Palabras en Inglés")
@@ -131,7 +130,7 @@ Para los apartados de descripción, tamaño e imagen se siguen las mismas pautas
 
 
 ### 6. Borrar una carta
-Para borrar una carta, tienes que pulsar el botón creado para tal fin, situado en la posición inferior de cada carta, lo único que tienes que tener en cuenta, que la carta puede tardar hasta 10 minutos en ser borrada en la base de datos de Vuforia.
+Para borrar una carta, tienes que pulsar el botón creado para tal fin, situado en la posición inferior de cada carta, lo único que debes tener en cuenta, que la carta puede tardar hasta 10 minutos en ser borrada en la base de datos de Vuforia.
 
 
 
@@ -146,21 +145,21 @@ Las restricciones son las siguientes:
 > 5. Admite solo formatos en PNG y JPG.
 > 6. La imagen tiene que ser de 8 a 24 bits como Max.
 > 7. Admite imágenes en color o en gris.
-> 8. Evitar imagenes que solo contengan elementos órganicos (circulos, figuras circulares, etc).
+> 8. Evitar imágenes que solo contengan elementos orgánicos (círculos, figuras circulares, etc.).
 > 9. El material de impresión tiene que ser en cartón, cartulina, aunque se puede imprimir en DINA4, pero evitando que la misma se doble.
 > 10. Evitar utilizar materiales de impresión reflectantes.
 
 
 ### 8. Comparativa de contraste local
-En la imagen se puede ver la comparativa de una imagen, el antes y despues de mejorar su nivel de contraste.
+En la imagen se puede ver la comparativa de una imagen, el antes y después de mejorar su nivel de contraste.
 
 
 ![Comparativa de contraste , fuente Vuforia](https://firebasestorage.googleapis.com/v0/b/animals-c205c.appspot.com/o/images%2Fejemplo_de_imagen.png?alt=media&token=f31c11b3-f3d6-4b7e-9811-410be36347b8  "Comparativa de contraste")
 
-La imagen y las restriciones se pueden consultar en la documentación oficial de vuforia, siguiendo los siguiene enlaces:
+La imagen y las restricciones se pueden consultar en la documentación oficial de Vuforia, siguiendo los siguientes enlaces:
 
-1. Mejores practicas [Best Practices](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets.html "Best Practices").
-2. Técnicas de optimización de [objetivos de imagen ](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
+1. Mejores prácticas [Best Practices](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets.html "Best Practices").
+2. Técnicas de optimización de [objetivos de imagen](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
 
 
 
