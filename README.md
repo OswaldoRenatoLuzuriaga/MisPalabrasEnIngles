@@ -161,6 +161,12 @@ La imagen y las restricciones se pueden consultar en la documentación oficial d
 2. Técnicas de optimización de [objetivos de imagen](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
 
 
+### 9. Cartas
+Podras descargar las cartas para que puedas empezar a jugar de la siguiente dirección
+
+
+[Cartas o target del juego](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
+
 
 
 
