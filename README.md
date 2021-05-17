@@ -77,7 +77,7 @@ Podrás repetir la partida las veces que quieras o si lo prefieres podrás salir
 
 ### 7. Restricciones del juego
 1. Solo podrás escanear una carta por partida, si intentas escanear una carta más de dos veces, el sistema te pedirá que pases a la siguiente carta.
-2. Las tres ayudas solo se pueden utilizar una vez por partida.
+2. Las dos primeras ayudas (Tiempo y Granada), solo se pueden utilizar una vez por partida.
 3. Solo hay una opción correcta, de las tres que tienes disponibles.
 4. El sistema no te permitirá escanear una carta nueva, hasta que no hayas pulsado en los botones de opciones que tienes disponibles (Zona inferior de tu pantalla)
 5. Escoge un lugar interior y una superficie plana para jugar, evita jugar en el exterior o con ambientes con exceso de luz.
