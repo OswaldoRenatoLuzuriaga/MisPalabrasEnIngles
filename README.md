@@ -165,7 +165,7 @@ La imagen y las restricciones se pueden consultar en la documentación oficial d
 Podras descargar las cartas y el APK del juego, pulsando en el enlace de abajo.
 
 
-[Cartas o target del juego](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
+[Cartas y APK, MisPalabras](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
 
 
 
