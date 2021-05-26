@@ -10,7 +10,7 @@ El trabajo fin de grado se basa en el desarrollo de una herramienta educativa qu
 ## Instalación
 Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tu teléfono móvil, esto te permite instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes:
 
-1. Descargar la app Mis Primeras Palabras en inglés y las cartas del juego. [Pulsa en el enlace](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
+1. Descarga la app Mis Primeras Palabras en inglés y las cartas del juego. [Pulsar para descargar app y cartas del juego](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
 2. Ir a Ajustes.
 3. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
 4. Una vez tengas habilitados los permisos, instalas la aplicación.
