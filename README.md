@@ -10,7 +10,7 @@ El trabajo fin de grado se basa en el desarrollo de una herramienta educativa qu
 ## Instalación
 Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tu teléfono móvil, esto te permite instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes:
 
-1. Descargar la APK Mis Primeras Palabras en inglés.
+1. Descargar la app Mis Primeras Palabras en inglés y las cartas del juego. [Pulsa en el enlace](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
 2. Ir a Ajustes.
 3. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
 4. Una vez tengas habilitados los permisos, instalas la aplicación.
@@ -163,8 +163,8 @@ La imagen y las restricciones se pueden consultar en la documentación oficial d
 2. Técnicas de optimización de [objetivos de imagen](https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets/image-targets-optimization-techniques.html)
 
 
-### 9. Cartas y APK
-Podras descargar las cartas y el APK del juego, pulsando en el enlace de abajo.
+### 9. Cartas y app
+Podras descargar las cartas y la app del juego, pulsando en el enlace de abajo.
 
 
 [Cartas y APK, MisPalabras](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
