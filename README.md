@@ -10,13 +10,13 @@ El trabajo fin de grado se basa en el desarrollo de una herramienta educativa qu
 ## Instalación
 Para la instalación de la aplicación es necesario habilitar los permisos de seguridad de tu teléfono móvil, esto te permite instalar aplicaciones de origen desconocido, los pasos que tienes que seguir para habilitarlos son los siguientes:
 
-### Pasos para habilitar los permisos de seguridad e instalar las aplicaciones de origen desconocido.
+#### Pasos para habilitar los permisos de seguridad e instalar las aplicaciones de origen desconocido.
 1. Ir a Ajustes.
 2. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
 3. Una vez tengas habilitados los permisos. Descarga la aplicación.
 
-### Descarga la aplicación MisPalabras.apk
-5. Descarga la app Mis Primeras Palabras en inglés y las cartas del juego. [Pulsar para descargar app y cartas del juego](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
+#### Descarga la aplicación Mis Primeras Palabras en inglés
+5. Descarga la app llamada MisPalabras.apk junto con las cartas del juego, pulsando en el el siguiente enlace. [Descargar](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
 6. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importante que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
 
 ## Desarrollo del juego
