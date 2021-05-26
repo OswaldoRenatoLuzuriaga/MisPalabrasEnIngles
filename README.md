@@ -8,16 +8,16 @@ Adquirir este conocimiento a edades tempranas, cuando el menor es aún más rece
 El trabajo fin de grado se basa en el desarrollo de una herramienta educativa que enseña vocabulario a niños de edades tempranas, utilizando como método de aprendizaje la realidad aumentada, esto le facilita un entorno lúdico, entretenido y de fácil asimilación.
 
 ## Instalación
-Para la instalación de la aplicación, antes es necesario habilitar los permisos de seguridad de tu teléfono móvil, esto te permite instalar aplicaciones de origen desconocido (aplicaciones que no se encuentran en Play Store).
+Para la instalación de la aplicación, es necesario habilitar los permisos de seguridad de tu teléfono móvil, esto te permite instalar aplicaciones de origen desconocido (aplicaciones que no se encuentran en Play Store) y seguidamente instalar la aplicación, sigue las siguientes etapas para hacerlo.
 
 #####  Etapa 1 habilitar los permisos de seguridad en tu teléfono móvil:
 1. Ir a Ajustes de tu teléfono móvil.
 2. En el buscador de ajustes busca el apartado instalar aplicaciones desconocidas.
-3. Una vez tengas habilitados los permisos. Descarga la aplicación.
+3. Una vez tengas habilitados los permisos, pasa a la etapa 2.
 
 ##### Etapa 2 Instalar la aplicación Mis Primeras Palabras en inglés:
-5. Descarga la app llamada MisPalabras.apk junto con las cartas del juego, pulsando en el siguiente enlace ->. [Descargar](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
-6. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importante que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
+1. Descarga la app llamada MisPalabras.apk junto con las cartas del juego, pulsando en el siguiente enlace ->. [Descargar](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
+2. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importante que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
 
 ## Desarrollo del juego
 
