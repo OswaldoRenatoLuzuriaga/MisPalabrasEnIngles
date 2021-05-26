@@ -16,7 +16,7 @@ Para la instalación de la aplicación es necesario habilitar los permisos de se
 3. Una vez tengas habilitados los permisos. Descarga la aplicación.
 
 #### Descarga la aplicación Mis Primeras Palabras en inglés
-5. Descarga la app llamada MisPalabras.apk junto con las cartas del juego, pulsando en el el siguiente enlace. [Descargar](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
+5. Descarga la app llamada MisPalabras.apk junto con las cartas del juego, pulsando en el siguiente enlace ->. [Descargar](https://drive.google.com/drive/folders/1NlN8Xfe2MXexxZYwCpfqyZwmybX9LKis?usp=sharing)
 6. La aplicación te pedirá permisos para acceder a la Cámara de tu teléfono móvil, es importante que los aceptes, si no los aceptas, no podrás utilizar la aplicación.
 
 ## Desarrollo del juego
